@@ -1,0 +1,131 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Nunito+Sans:ital,wght@0,700;1,400&display=swap');
+/*
+   font-family: 'Montserrat', sans-serif;      Weights: 800, 700
+   font-family: 'Nunito Sans', sans-serif;     Weights: 700, 400
+*/
+
+
+
+/* Vairables  */
+:root {
+   /* MAIN PAGE PROPERTIES */
+   --backgroundColour: #FFFFFF;
+   --blueAccent: #4087C2;
+   --yellowAccent: #F6C339;
+   --darkAccent: #333333;
+   --darkBlue: #24252A;
+   --darkBlack: #0D0D0D;
+   --snowWhite: #FFFAFA;
+
+   --mainTextColour: white;
+   --secoundaryTextColour: black;
+
+
+   --titleFont: 'Montserrat', sans-serif;
+   --headerFont: 'Nunito Sans', sans-serif;
+   --bodyFont: 'Nunito Sans', sans-serif;
+
+   --titleFontWeight: 700;
+   --headerFontWeight: 700;
+   --bodyFontWeight: 400;
+
+   --titleFontSize: 60px;
+   --headerFontSize: 40px;
+   --bodyFontSize: 16px;
+
+   /* HEADER PROPERTIES */
+
+
+   /* NAV PROPERTIES */
+
+
+}
+
+/* JAVASCRIPT CLASSES */
+
+.hidden {display: none;}
+.show {display: initial;}
+
+
+/* WEBSITE CSS BEGINS */
+
+html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--darkBlue); color: var(--mainTextColour)}
+
+body{margin: 0px; padding: 0px;}
+
+   /* HEADER & NAV BAR STYLING */
+   header {}
+
+      nav {}
+
+         li, a {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: var(--textFont);
+            font-size: 16px;
+            color: var(--snowWhite);
+            text-decoration: none;
+         }
+
+         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+         }
+
+         .logo-text {
+            cursor: pointer;
+         }
+
+         .nav-links {
+            list-style: none;
+         }
+
+         .nav-links li {
+            display: inline-block;
+            padding: 0px 20px;
+         }
+
+         .nav-links li a {
+            transition: all 0.3s ease 0s;
+         }
+         .nav-links li a:hover {
+            color: var(--blueAccent)
+         }
+
+   .title-page {}
+
+      #title-container, .container {
+         height: 73px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 30px 10%;
+         background-color: var(--snowWhite)
+      }
+
+         .title-text {
+            font-family: var(--titleFont);
+            font-size: var(--titleFontSize);
+            color: var(--darkBlack);
+            display: inline-block;
+            margin: 0px;
+         }
+
+         img {
+            max-width: 100%;
+            max-height: 100%;
+         }
+
+      .container{
+         height: 100%;
+         padding: 10px 11% 30px 11%;
+      }
+         p {
+            font-family: var(--bodyFont);
+            font-size: var(--bodyFontSize);
+            color: var(--darkBlack);
+            display: inline-block;
+            margin: 0px;
+         }

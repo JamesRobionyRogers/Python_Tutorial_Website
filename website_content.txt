@@ -1,0 +1,3 @@
+Python in 11DIT is a tutorial website designed to help teach and demonstrate some of the key techniques used in the year 11 Python programming unit at Onslow College
+
+ 
