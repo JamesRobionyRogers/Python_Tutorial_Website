@@ -1,3 +1,13 @@
 Python in 11DIT is a tutorial website designed to help teach and demonstrate some of the key techniques used in the year 11 Python programming unit at Onslow College
 
- 
+
+Loops in Python
+-- Easy -- For Loops, While Loops --
+
+For loops are used to iterate through sequences. These sequences can come in the form of: lists, tuples, dictionaries, sets or strings.
+Using a for loop we can execute a block of code for every iteration of a sequence.
+
+
+Here are a couple of basic examples of for loops in action:
+
+*** Code ***

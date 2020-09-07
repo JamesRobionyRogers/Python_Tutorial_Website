@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Python in 11DIT</title>
+
+		<meta name="description" content=" ... ">
+      <link rel="icon" href="img/icons/icon-5.png">
+
+      <!-- Code Blocks CSS library (EnlighterJS) -->
+      <link rel="stylesheet" href="css/enlighterjs.min.css" />
+      <!-- Linking to CSS style sheets -->
+		<link href="css/styles.css" rel="stylesheet">
+
+      <style>
+         .enlighter-t-bootstrap4 {padding: 25px;}
+      </style>
+
+	</head>
+
+	<body>
+      <header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+         <a class="logo-text" href="#">PYTHON IN 11DIT</a></li>
+         <nav>
+            <ul class="nav-links">
+               <li><a class="link" href="index.html">Home</a></li>
+               <li><a id="yellow" class="link" href="#">Tutorials</a></li>
+            </ul>
+         </nav>
+      </header>
+
+      <div class="title-page">
+
+         <div class="tutorial-title-container">
+            <h1 class="tutorial-title-text">Loops in Python</h1>
+            <p class="tutorial-desc"><strong class="green">Easy</strong> <x>-</x> For Loops, While Loops</p>
+         </div>
+
+
+      </div>
+
+      <div class="tutorial-container">
+         <h2 class="subheader">For Loops</h2>
+         <p>For loops are used to iterate through sequences. These sequences can come in the form of: lists, tuples, dictionaries, sets or strings.</p>
+         <p>Using a for loop we can execute a block of code for every iteration of a sequence.</p>
+         <br>
+         <p>Here are a couple of basic examples of for loops in action:</p>
+
+         <div class="code-block">
+           <pre data-enlighter-language="python" class="toggler">
+# This for loop simply iterates through, printing out each item in the list defigned below
+fruits = ['apple', 'banana', 'orange']
+for fruit in fruits:
+   print(fruit)
+
+# This for loop is known as a counting loop, as it iterates from the numbers 1, through to 5
+for counting in range(1, 5):
+   print(counting)
+           </pre>
+         </div>
+
+         <p>Another example of for loops being used are in <yellow>nested loops</yellow>. This is when you put a for loop inside another for loop. Hence the name "nested".</p>
+
+         <div class="code-block">
+           <pre data-enlighter-language="python" class="toggler">
+origins = ["tree", "bush", "plant"]
+fruits = ["pear", "blackberry", "strawberry"]
+
+for fruit in fruits:
+   for origin in origins:  # loop nested inside another loop
+      print(f"An {fruit} grows on a {origin}")
+           </pre>
+         </div>
+
+         <h2 class="subheader">While Loops</h2>
+         <p>As for a while loop, here are the basics to that.</p>
+         <p>A while loop will run the block of code untill as long as a contion is met </p>
+
+         <div class="code-block">
+           <pre data-enlighter-language="python" class="toggler">
+# As for a while loop, here are the basics to that
+age = 13
+while age >= 13 and age <= 19: # here is a conditional statement.
+   # While the age is between the values of 13 and 19 everything in the loop will run
+   print("I am a teenager ", age)
+   age += 1
+
+# here is an example of a while else statement
+iteration = 0
+while iteration != 3:
+   print(iteration, "Inside while loop")
+   iteration += 1
+else:  # runs once the while loop finishes
+   print("Inside else clause")
+
+# there is also such a thing as an infinate loop
+while True:
+   print("Infinate loop!")
+   break
+           </pre>
+         </div>
+
+         <p>And there you go, that is basicly all of the techniques related to loops you need in order to progress through 11DIT with ease. Check out the rest of the tutorials from the menu above. </p>
+
+      </div>
+
+
+
+
+
+	</body>
+
+   <!-- Code Blocks javascript library (EnlighterJS) -->
+   <script type="text/javascript" src="scripts/enlighterjs.min.js"></script>
+   <!-- JQuery javascript library (connects to the online library)-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script type="text/javascript">
+      // INIT CODE - simple page-wide initialization based on css selectors
+      // - highlight all pre + code tags (CSS3 selectors)
+      // - use javascript as default language
+      // - use theme "enlighter" as default theme
+      // - replace tabs with 2 spaces
+      EnlighterJS.init('pre', 'code', {
+            language : 'python',
+            theme: 'atomic',
+            indent : 4
+      });
+    </script>
+   <!-- My javascript file -->
+   <script type="text/javascript" src="scripts/scripts.js"></script>
+
+</html>

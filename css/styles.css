@@ -1,8 +1,9 @@
 /* Importing Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Nunito+Sans:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Nunito+Sans:ital,wght@0,800;0,900;1,400&display=swap');
+
 /*
-   font-family: 'Montserrat', sans-serif;      Weights: 800, 700
-   font-family: 'Nunito Sans', sans-serif;     Weights: 700, 400
+   font-family: 'Montserrat', sans-serif;      Weights: 900, 800, 700
+   font-family: 'Nunito Sans', sans-serif;     Weights: 900, 800, 400
 */
 
 
@@ -21,23 +22,33 @@
    --mainTextColour: white;
    --secoundaryTextColour: black;
 
+   --sitePadding: 30px 10%;
+   --navPadding: 20px 10%;
+   --bodyTextPadding: 10px 0px;
+   --codeBlockPadding: 10px 0px 30px 0px;
+
+
 
    --titleFont: 'Montserrat', sans-serif;
    --headerFont: 'Nunito Sans', sans-serif;
    --bodyFont: 'Nunito Sans', sans-serif;
 
-   --titleFontWeight: 700;
-   --headerFontWeight: 700;
+   --titleFontWeight: 900;
+   --headerFontWeight: 800;
    --bodyFontWeight: 400;
 
    --titleFontSize: 60px;
    --headerFontSize: 40px;
-   --bodyFontSize: 16px;
+   --bodyFontSize: 18px;
 
    /* HEADER PROPERTIES */
 
 
    /* NAV PROPERTIES */
+
+   /* CARD PROPERTIES */
+   --cardSmallWidth: 30.6%;
+   --cardWideWidth: 48%;
 
 
 }
@@ -50,12 +61,12 @@
 
 /* WEBSITE CSS BEGINS */
 
-html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--darkBlue); color: var(--mainTextColour)}
+html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--backgroundColour); color: var(--mainTextColour)}
 
 body{margin: 0px; padding: 0px;}
 
    /* HEADER & NAV BAR STYLING */
-   header {}
+   header {background-color: var(--darkBlue);}
 
       nav {}
 
@@ -71,7 +82,7 @@ body{margin: 0px; padding: 0px;}
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 10%;
+            padding: var(--navPadding);
          }
 
          .logo-text {
@@ -90,22 +101,27 @@ body{margin: 0px; padding: 0px;}
          .nav-links li a {
             transition: all 0.3s ease 0s;
          }
+
+         #yellow.link:hover {
+            color: var(--yellowAccent);
+         }
+
          .nav-links li a:hover {
             color: var(--blueAccent)
          }
 
+
    .title-page {}
 
       #title-container, .container {
-         height: 73px;
+         /* height: 73px; */
          display: flex;
          justify-content: space-between;
          align-items: center;
-         padding: 30px 10%;
-         background-color: var(--snowWhite)
+         padding: var(--sitePadding);
       }
 
-         .title-text {
+         .title-text /*, .tutorial-title-text */ {
             font-family: var(--titleFont);
             font-size: var(--titleFontSize);
             color: var(--darkBlack);
@@ -113,19 +129,128 @@ body{margin: 0px; padding: 0px;}
             margin: 0px;
          }
 
-         img {
+         #title-container img {
             max-width: 100%;
-            max-height: 100%;
+            max-height: 73px;
+
          }
 
-      .container{
+      .container, .tutorial-container {
          height: 100%;
          padding: 10px 11% 30px 11%;
+         font-size: var(--bodyFontSize)
       }
          p {
             font-family: var(--bodyFont);
-            font-size: var(--bodyFontSize);
+            /* font-size: var(--bodyFontSize); */
             color: var(--darkBlack);
             display: inline-block;
             margin: 0px;
+         }
+
+
+   .tutorial-cards {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-flow: wrap;
+      padding: var(--sitePadding);
+      }
+
+      .card-small, .card-wide {
+         width: var(--cardSmallWidth);
+         margin: 0px 0px 50px 0px;
+         transition: 0.3s;
+         position: relative;
+         text-align: center;
+         max-height: 188px;
+      }
+
+      .card-wide {
+         width: var(--cardWideWidth);
+      }
+
+      .card-small:hover, .card-wide:hover {
+         transform: scale(1.05);
+         box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.75);
+         cursor: pointer;
+      }
+
+      .card-small img, .card-wide img {
+         width: 100%;
+      }
+
+      .card-title h1  {
+         font-size: 50px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         margin: 0px;
+      }
+
+
+
+   /* Tutorial Page Styling  */
+   .tutorial-title-container {padding: var(--sitePadding);}
+
+      .tutorial-title-text {
+         font-family: var(--titleFont);
+         font-size: var(--titleFontSize);
+         color: var(--darkBlack);
+         width: 100%;
+         display: inline-block;
+         text-align: center;
+         margin: 0px auto;
+      }
+
+      .tutorial-desc {
+         width: 100%;
+         display: inline-block;
+         text-align: center;
+         font-size: 18px;
+         font-stretch: expanded;
+      }
+
+      .tutorial-desc .green {
+         color: green;
+      }
+
+      .tutorial-desc x {
+         padding: 0px 10px;
+      }
+
+   .tutorial-container {}
+
+      yellow {
+         color: var(--blueAccent)
+      }
+
+      .subheader {
+         color: var(--darkBlack);
+         text-transform: uppercase;
+         font-family: var(--headerFont);
+         font-size: var(--headerFontSize);
+         font-weight: var(--headerFontWeight);
+         font-style: bold;
+         margin: 0px;
+      }
+
+      .tutorial-container p {
+         width: 100%;
+         padding: var(--bodyTextPadding);
+         font-size: var(--bodyFontSize);
+      }
+
+      .code-block {
+         padding: var(--codeBlockPadding);
+         justify-content: center;
+
+      }
+
+         .enlighter-t-atomic {
+            padding: 25px 0px;
+            margin: 0px 2.5%;
+            border-radius: 5px;
          }
