@@ -113,7 +113,7 @@ body{margin: 0px; padding: 0px;}
          }
 
          .nav-links li a:hover, .site-map li a:hover {
-            color: var(--blueAccent)
+            color: var(--blueAccent);
          }
 
 
@@ -232,7 +232,7 @@ body{margin: 0px; padding: 0px;}
 
    .tutorial-container {}
 
-      yellow {
+      blue {
          color: var(--blueAccent)
       }
 
@@ -277,7 +277,7 @@ body{margin: 0px; padding: 0px;}
          }
 
 
-   footer {justify-content: space-around;}
+   footer {justify-content: space-around; position: absolute; bottom: 0px; width: 80%;}
 
       footer .nav-links {text-align: center;}
 
