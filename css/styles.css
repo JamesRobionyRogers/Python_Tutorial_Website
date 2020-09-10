@@ -48,8 +48,10 @@
    /* NAV PROPERTIES */
 
    /* CARD PROPERTIES */
+   --cardHeight: 200px;
    --cardSmallWidth: 30.6%;    /* 30.6% */
    --cardWideWidth: 48%;
+   --borderRadius: 5px;
 
    /* FOOTER */
    --footerLinkPadding: calc(calc(100vw - 20%) / 3.5);
@@ -164,40 +166,48 @@ body{margin: 0px; padding: 0px;}
       padding: var(--sitePadding);
       }
 
+      .small-card-wrapper, .wide-card-wrapper {margin: 0px 0px 50px 0px; transition: 0.3s;}
+
+      .small-card-wrapper {width: var(--cardSmallWidth);}
+      .wide-card-wrapper {width: var(--cardWideWidth);}
+
+      .card-container{overflow: hidden; position: relative; border-radius: var(--borderRadius);}
+
       .card-small, .card-wide {
-         width: var(--cardSmallWidth);
-         background-size: cover;
-         margin: 0px 0px 50px 0px;
-         transition: 0.3s;
-         position: relative;
+         display: inline-block;
+         height: var(--cardHeight);
+         line-height: var(--cardHeight);
+         overflow: hidden;
+         transition: 0.2s;
          text-align: center;
          max-height: 188px;
+         border-radius: var(--borderRadius);
       }
 
-      .card-wide {
-         width: var(--cardWideWidth);
-      }
-
-      .card-small:hover, .card-wide:hover {
+      .card-small:hover, .card-wide:hover, .small-card-wrapper:hover, .wide-card-wrapper:hover {
          transform: scale(1.05);
          box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.75);
          cursor: pointer;
       }
 
       .card-small img, .card-wide img {
+         position: relative;
+         margin: -50% auto;
          width: 100%;
+         height: auto;
+         vertical-align: middle;
+         border-radius: var(--borderRadius);;
       }
 
       .card-title h1  {
          font-size: 50px;
+         line-height: 60px;
          position: absolute;
          top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
          margin: 0px;
-      }
-
-         /* #large-text {top: 20%; max-width: var(--cardSmallWidth); text-align: center;} */
+         }
 
 
 
@@ -277,7 +287,7 @@ body{margin: 0px; padding: 0px;}
          }
 
 
-   footer {justify-content: space-around; position: absolute; bottom: 0px; width: 80%;}
+   footer {justify-content: space-around; position: absolute; /* bottom: 0px; */ width: 80%;}
 
       footer .nav-links {text-align: center;}
 
