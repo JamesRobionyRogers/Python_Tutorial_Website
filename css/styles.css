@@ -166,7 +166,7 @@ body{margin: 0px; padding: 0px;}
       padding: var(--sitePadding);
       }
 
-      .small-card-wrapper, .wide-card-wrapper {margin: 0px 0px 50px 0px; transition: 0.3s;}
+      .small-card-wrapper, .wide-card-wrapper {margin: 0px 0px 50px 0px; transition: 0.3s; border-radius: var(--borderRadius);}
 
       .small-card-wrapper {width: var(--cardSmallWidth);}
       .wide-card-wrapper {width: var(--cardWideWidth);}
@@ -190,13 +190,22 @@ body{margin: 0px; padding: 0px;}
          cursor: pointer;
       }
 
+      /* Media query for fixing the undersized window white box issues */
+      @media only screen and (max-width: 1420px) { /* targetinng windows 1420px and under */
+         .card-small:hover, .card-wide:hover {
+            transform: scale(1.4);  /* Suppose to increase the scale the image in enlarging by, thus filling the white box, solving the issue */
+            transition: 0.2s;
+         }
+
+
+
       .card-small img, .card-wide img {
          position: relative;
          margin: -50% auto;
          width: 100%;
          height: auto;
          vertical-align: middle;
-         border-radius: var(--borderRadius);;
+         border-radius: var(--borderRadius);
       }
 
       .card-title h1  {
@@ -212,79 +221,77 @@ body{margin: 0px; padding: 0px;}
 
 
    /* Tutorial Page Styling  */
-   .tutorial-title-container {padding: var(--sitePadding);}
+   .tutorial-page {}
 
-      .tutorial-title-text {
-         font-family: var(--titleFont);
-         font-size: var(--titleFontSize);
-         color: var(--darkBlack);
-         width: 100%;
-         display: inline-block;
-         text-align: center;
-         margin: 0px auto;
-      }
+      blue {color: var(--blueAccent)}
+      green {color: green;}
+      orange {color: #F26938;}
 
-      .tutorial-desc {
-         width: 100%;
-         display: inline-block;
-         text-align: center;
-         font-size: 18px;
-         font-stretch: expanded;
-      }
+      .tutorial-title-container {padding: var(--sitePadding);}
 
-      .tutorial-desc .green {
-         color: green;
-      }
-
-      .tutorial-desc x {
-         padding: 0px 10px;
-      }
-
-   .tutorial-container {}
-
-      blue {
-         color: var(--blueAccent)
-      }
-
-      .subheader {
-         color: var(--darkBlack);
-         text-transform: uppercase;
-         font-family: var(--headerFont);
-         font-size: var(--headerFontSize);
-         font-weight: var(--headerFontWeight);
-         font-style: bold;
-         padding: 15px 0px 0px 0px;
-         margin: 0px;
-      }
-
-      h3 {
-         color: var(--darkBlack);
-         text-transform: uppercase;
-         font-family: var(--headerFont);
-         font-size: var(--subheaderFontSize);
-         font-weight: var(--headerFontWeight);
-         font-style: bold;
-         padding: 15px 0px 0px 0px;
-         margin: 0px;
-      }
-
-      .tutorial-container p {
-         width: 100%;
-         padding: var(--bodyTextPadding);
-         font-size: var(--bodyFontSize);
-      }
-
-      .code-block {
-         padding: var(--codeBlockPadding);
-         justify-content: center;
-
-      }
-
-         .enlighter-t-atomic {
-            padding: 25px 0px;
-            margin: 0px 2.5%;
-            border-radius: 5px;
+         .tutorial-title-text {
+            font-family: var(--titleFont);
+            font-size: var(--titleFontSize);
+            color: var(--darkBlack);
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            margin: 0px auto;
          }
+
+         .tutorial-desc {
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            font-stretch: expanded;
+         }
+
+         .tutorial-desc x {
+            padding: 0px 10px;
+         }
+
+      .tutorial-container {}
+
+         .subheader {
+            color: var(--darkBlack);
+            text-transform: uppercase;
+            font-family: var(--headerFont);
+            font-size: var(--headerFontSize);
+            font-weight: var(--headerFontWeight);
+            font-style: bold;
+            padding: 15px 0px 0px 0px;
+            margin: 0px;
+         }
+
+         h3 {
+            color: var(--darkBlack);
+            text-transform: uppercase;
+            font-family: var(--headerFont);
+            font-size: var(--subheaderFontSize);
+            font-weight: var(--headerFontWeight);
+            font-style: bold;
+            padding: 15px 0px 0px 0px;
+            margin: 0px;
+         }
+
+         .tutorial-container p {
+            width: 100%;
+            padding: var(--bodyTextPadding);
+            font-size: var(--bodyFontSize);
+         }
+
+         .code-block {
+            padding: var(--codeBlockPadding);
+            justify-content: center;
+
+         }
+
+            .enlighter-t-atomic {
+               padding: 25px 0px;
+               margin: 0px 2.5%;
+               border-radius: 5px;
+            }
 
 
    footer {justify-content: space-around; position: absolute; /* bottom: 0px; */ width: 80%;}
