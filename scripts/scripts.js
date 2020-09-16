@@ -39,13 +39,15 @@ $(document).ready(function(){
 
    $('.dropdown').hover(function () {
       $('.dropdown-content').slideDown();
-      // $('header').css('padding-bottom', "0px").fadeIn()
+      // $('header').css('padding-bottom', "0px");
+      // $('.dropdown-content').css('padding-top', '20px');
    });
 
    $('.dropdown-content').hover(function () {
       $('.dropdown-content').slideDown();
    }, function (){
       $('.dropdown-content').slideUp();
+      // $('header').css('padding-bottom', "20px");
    });
 
 
