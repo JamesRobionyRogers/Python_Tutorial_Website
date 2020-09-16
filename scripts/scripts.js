@@ -29,3 +29,24 @@ $(".try-except-page img").attr("src", tryExceptImg);
 $(".lists-page img").attr("src", listsImg);
 $(".functions-page img").attr("src", functionsImg);
 $(".classes-page img").attr("src", classesImg);
+
+
+
+$(document).ready(function(){
+
+   // JQuery Nav Dropdown
+   $(".dropdown-content").hide()  // hides the dropdown from the benginning
+
+   $('.dropdown').hover(function () {
+      $('.dropdown-content').slideDown();
+      // $('header').css('padding-bottom', "0px").fadeIn()
+   });
+
+   $('.dropdown-content').hover(function () {
+      $('.dropdown-content').slideDown();
+   }, function (){
+      $('.dropdown-content').slideUp();
+   });
+
+
+});
