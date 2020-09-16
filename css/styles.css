@@ -166,11 +166,7 @@ body{margin: 0px; padding: 0px;}
       padding: var(--sitePadding);
       }
 
-<<<<<<< HEAD
       .small-card-wrapper, .wide-card-wrapper {margin: 0px 0px 50px 0px; transition: 0.3s; border-radius: var(--borderRadius);}
-=======
-      .small-card-wrapper, .wide-card-wrapper {margin: 0px 0px 50px 0px; transition: 0.3s;}
->>>>>>> 341d3b6ac00fe2952990d8c8ffbaf38aa952b244
 
       .small-card-wrapper {width: var(--cardSmallWidth);}
       .wide-card-wrapper {width: var(--cardWideWidth);}
@@ -209,11 +205,7 @@ body{margin: 0px; padding: 0px;}
          width: 100%;
          height: auto;
          vertical-align: middle;
-<<<<<<< HEAD
          border-radius: var(--borderRadius);
-=======
-         border-radius: var(--borderRadius);;
->>>>>>> 341d3b6ac00fe2952990d8c8ffbaf38aa952b244
       }
 
       .card-title h1  {
