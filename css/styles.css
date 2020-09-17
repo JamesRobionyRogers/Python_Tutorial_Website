@@ -24,7 +24,7 @@
 
    --sitePadding: 30px 10%;
    --navPadding: 20px 10%;
-   --dropdownPadding: 0px 10% 20px 10%;
+   --dropdownPadding: 0px 10% 30px 10%;
    --dropdownLinksPadding: calc(calc(100vw - 20%) / 13.3);
    --bodyTextPadding: 10px 0px;
    --codeBlockPadding: 10px 0px 30px 0px;
@@ -70,9 +70,9 @@
 
 /* WEBSITE CSS BEGINS */
 
-html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--backgroundColour); color: var(--mainTextColour)}
+html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--backgroundColour); color: var(--mainTextColour);}
 
-body{margin: 0px; padding: 0px;}
+body{margin: 0px; padding: 0px; position: relative;}
 
    /* HEADER & NAV BAR STYLING */
    header, footer {
@@ -86,12 +86,13 @@ body{margin: 0px; padding: 0px;}
       nav {}
 
 
-         li, a {
+         li, a, p.dropdown {
             font-family: 'Montserrat', sans-serif;
             font-weight: var(--textFont);
             font-size: 16px;
             color: var(--snowWhite);
             text-decoration: none;
+            cursor: pointer;
          }
 
 
@@ -205,11 +206,18 @@ body{margin: 0px; padding: 0px;}
       }
 
       /* Media query for fixing the undersized window white box issues */
-      @media only screen and (max-width: 1420px) { /* targetinng windows 1420px and under */
+      @media only screen and (max-width: 1420px) { /* targeting windows 1420px and under */
          .card-small:hover, .card-wide:hover {
             transform: scale(1.4);  /* Suppose to increase the scale the image in enlarging by, thus filling the white box, solving the issue */
             transition: 0.2s;
          }
+      }
+
+      @media only screen and (max-width: 1100px) { /* targetinng windows 1420px and under */
+         /* Reduce tutorial cards text size  */
+
+         /* Increase small cards height and fix white top ad bottom bar thing */
+      }
 
 
 
@@ -308,7 +316,7 @@ body{margin: 0px; padding: 0px;}
             }
 
 
-   footer {justify-content: space-around; position: absolute; bottom: 0; width: 80%;}
+   footer {justify-content: space-around; position: relative; bottom: 0; width: 80%;}
 
       footer .nav-links {text-align: center;}
 
