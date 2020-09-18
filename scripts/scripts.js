@@ -47,4 +47,14 @@ $(document).ready(function(){
       $('.dropdown-content').slideUp();
    });
 
+   // Sticking footer to the bottom of the page  -  Sourced from: https://www.youtube.com/watch?v=Sau3hn7zEUY
+   let bodyHeight = $(document).outerHeight();
+   alert(bodyHeight);
+   let footerHeight = $('footer').outerHeight();
+
+   // Check the video for the body-wrapper
+   let bodyWrapperHeight = bodyHeight - footerHeight;
+   $('#body-wrapper').css('height', `${bodyWrapperHeight}px`);
+
+
 });

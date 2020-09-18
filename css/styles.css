@@ -217,6 +217,10 @@ body{margin: 0px; padding: 0px; position: relative;}
          /* Reduce tutorial cards text size  */
 
          /* Increase small cards height and fix white top ad bottom bar thing */
+         .card-small img, .card-wide img {
+           transform: scale(1.4);
+           /* min-height: 100%; */
+         }
       }
 
 
