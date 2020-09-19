@@ -261,6 +261,7 @@ body{margin: 0px; padding: 0px; position: relative;}
       blue {color: var(--blueAccent)}
       green {color: green;}
       orange {color: #F26938;}
+      red {color: var(--errorRed);}
 
       .tutorial-title-container {padding: var(--sitePadding);}
 
@@ -318,6 +319,16 @@ body{margin: 0px; padding: 0px; position: relative;}
             font-size: var(--bodyFontSize);
          }
 
+            .tutorial-container p a.repl-link {
+               color: var(--blueAccent);
+               text-decoration: underline;
+               transition: 0.2s;
+               }
+
+               .tutorial-container p a.repl-link:hover {
+                  color: var(--yellowAccent);
+               }
+
          /* List styling */
          p.list-title {padding-bottom: 5px;}
 
@@ -343,10 +354,12 @@ body{margin: 0px; padding: 0px; position: relative;}
 
             }
 
-            /* Used for in paragraph code */
-            .enlighter-t-enlighter.enlighter-v-inline {
-               font-size: 15px;
-            }
+            /* Styling for code blovks in paragraph  */
+            span.enlighter {padding: 0px 5px;}
+               /* In paragraph code font size */
+               .enlighter-t-enlighter.enlighter-v-inline {
+                  font-size: 15px;
+               }
 
             /* Used for main code blocks */
             .enlighter-t-atomic, .enlighter-t-dracula {
@@ -355,30 +368,30 @@ body{margin: 0px; padding: 0px; position: relative;}
                border-radius: 5px;
             }
 
-            /* Styling for error message theme to reduce margin */
+            /* Styling for error message theme */
             .enlighter-t-dracula {
                padding: 0px 0px 25px 10px;
                border-radius: 0px 0px 5px 5px;
-            }
+               }
 
-            /* Connecting the top code with the bottom error message */
-            .error-message .enlighter-t-atomic {
-               padding: 25px 0px 10px 0px;
                /* Connecting the top code with the bottom error message */
-               border-radius: 5px 5px 0px 0px;
-            }
+               .error-message .enlighter-t-atomic {
+                  padding: 25px 0px 10px 0px;
+                  /* Connecting the top code with the bottom error message */
+                  border-radius: 5px 5px 0px 0px;
+               }
 
-            /* Styling text for error message theme */
-            .enlighter-t-dracula span.enlighter-text,
-            .enlighter-t-dracula span.enlighter-m0,
-            .enlighter-t-dracula span.enlighter-g1,
-            .enlighter-t-dracula span.enlighter-s0,
-            .enlighter-t-dracula span.enlighter-n1,
-            .enlighter-t-dracula span.enlighter-k0,
-            .enlighter-t-dracula span.enlighter-k1 {
-               color: var(--errorRed);
-               font-weight: 600;
-            }
+               /* Styling text for error message theme */
+               .enlighter-t-dracula span.enlighter-text,
+               .enlighter-t-dracula span.enlighter-m0,
+               .enlighter-t-dracula span.enlighter-g1,
+               .enlighter-t-dracula span.enlighter-s0,
+               .enlighter-t-dracula span.enlighter-n1,
+               .enlighter-t-dracula span.enlighter-k0,
+               .enlighter-t-dracula span.enlighter-k1 {
+                  color: var(--errorRed);
+                  font-weight: 600;
+               }
 
 
    footer {justify-content: space-around; position: relative; bottom: 0; width: 80%;}
