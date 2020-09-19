@@ -187,9 +187,81 @@ for animal in big_five:
 >>>  ducks.remove(True)
 >>>  print(ducks)
 ["Donald", "Huey", "Dewey", True, "Louie"]
-
 	           </pre>
 	         </div>
+
+				<h2 class="subheader">2D Lists</h2>
+				<p>A list is heterogeneous. This means that we can put any type of data into a list: strings, integers, floats and Booleans. We can also put lists inside lists! This makes a list 2-Dimensional.</p>
+				<p>To create a 2D list you would write the notation like:</p>
+
+				<div class="code-block">
+	           <pre>
+# 2D lists are lists that are inside another list, like so
+movies = [['The Hobbit', 182], ['Lord of the Rings', 228], ["Harry Potter", 159]]
+	           </pre>
+	         </div>
+
+				<h3>Adding to a 2D List</h3>
+				<p>Adding or inserting into a 2D list is just as simple as it is with a 1D list. Here's an example.</p>
+
+				<div class="code-block">
+				  <pre>
+movies[0].append('7.8 ★')  # appending to 'The Hobbit' list
+print(movies)
+>>>  [['The Hobbit', 182, '7.8 ★'] ... ]
+movies[1].insert(1, '8.8 ★')  # inserting into 'Lord of the Rings' list
+print(movies)
+>>>  [ ... ['Lord of the Rings', '8.8 ★', 228] ... ]
+				  </pre>
+				</div>
+
+				<h3>Removing Items From a 2D List</h3>
+				<p>Removing is items is als othe same, we can <code data-enlighter-theme="enlighter">pop()</code> or <code data-enlighter-theme="enlighter">remove()</code></p>
+
+				<div class="code-block">
+				  <pre>
+movies[0].remove(182)  # removing from 'The Hobbit' list
+print(movies)
+>>>  [['The Hobbit', '7.8 ★'] ... ]
+movies[1].pop(0)
+print(movies)
+>>>  [ ... ['8.8 ★', 228] ... ]
+				  </pre>
+				</div>
+
+				<h3>Accessing Items Within a 2D List</h3>
+				<p>If we want to access a value in our list be careful! You don't write it with a square bracket inside a square bracket list how you create your 2D list. Instead you write it next to each other with the first index referring to the first index of the list and the second the second.</p>
+
+				<div class="code-block">
+				  <pre>
+movies = [['The Hobbit', 182], ['Lord of the Rings', 228], ["Harry Potter", 159]]
+
+# accessing a 2D list is simple
+print(f'Title: {movies[0][0]}   Runtime: {movies[0][1]}')
+>>>  'Title: The Hobbit   Runtime: 182'
+print(f'Title: {movies[2][0]}   Runtime: {movies[2][1]}')
+>>>  'Title: Harry Potter   Runtime: 159'
+
+# Technically you could just keep going on with a 3D list etc.
+				  </pre>
+				</div>
+
+				<h3>Filling a 2D List</h3>
+				<p>If we wanted to fill our 2D list we would need a nested loop. Additionally inside each loop we would need to create a new list.</p>
+
+				<div class="code-block">
+				  <pre>
+students = []
+names = ['James', 'Daniel', 'Callum', 'George']
+ages = [17, 16, 14, 10]
+
+for index_value in range(len(names)):
+   students.append([names[index_value], ages[index_value]])
+
+print(students)
+>>>  [['James', 17], ['Daniel', 16], ['Callum', 14], ['George', 10]]
+				  </pre>
+				</div>
 
 	      </div>
 		</div>
