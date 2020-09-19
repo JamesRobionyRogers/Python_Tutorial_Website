@@ -74,6 +74,8 @@ html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizi
 
 body{margin: 0px; padding: 0px; position: relative;}
 
+   #body-wrapper, #tutorial-body-wrapper {width: 100%;}
+
    /* HEADER & NAV BAR STYLING */
    header, footer {
       display: flex;
@@ -159,7 +161,6 @@ body{margin: 0px; padding: 0px; position: relative;}
          }
 
       .container, .tutorial-container {
-         height: 100%;
          padding: 10px 11% 30px 11%;
          font-size: var(--bodyFontSize)
       }
@@ -205,6 +206,13 @@ body{margin: 0px; padding: 0px; position: relative;}
          cursor: pointer;
       }
 
+         /*
+         /* Blurred card images on hover */ /*
+         .card-small:hover .card-small img, .card-wide:hover .card-wide img, .small-card-wrapper:hover img, .wide-card-wrapper:hover img {
+            filter: blur(0.8px);
+            -webkit-filter: blur(0.8px);
+         } */
+
       /* Media query for fixing the undersized window white box issues */
       @media only screen and (max-width: 1420px) { /* targeting windows 1420px and under */
          .card-small:hover, .card-wide:hover {
@@ -213,7 +221,7 @@ body{margin: 0px; padding: 0px; position: relative;}
          }
       }
 
-      @media only screen and (max-width: 1100px) { /* targetinng windows 1420px and under */
+      @media only screen and (max-width: 1100px) { /* targetinng windows 1100px and under */
          /* Reduce tutorial cards text size  */
 
          /* Increase small cards height and fix white top ad bottom bar thing */
@@ -292,7 +300,7 @@ body{margin: 0px; padding: 0px; position: relative;}
 
          h3 {
             color: var(--darkBlack);
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
             font-family: var(--headerFont);
             font-size: var(--subheaderFontSize);
             font-weight: var(--headerFontWeight);
@@ -301,18 +309,45 @@ body{margin: 0px; padding: 0px; position: relative;}
             margin: 0px;
          }
 
+         /* .italic {font-style: italic;}  */
+
          .tutorial-container p {
             width: 100%;
             padding: var(--bodyTextPadding);
             font-size: var(--bodyFontSize);
          }
 
+         /* List styling */
+         p.list-title {padding-bottom: 5px;}
+
+            .tutorial-container ul.tutorial-list {
+               padding: 0px 0px 20px 40px;
+               margin: 0px;
+               list-style-type: decimal;
+               color: var(--darkBlack);
+            }
+
+            .tutorial-container ul li {
+            font-family: var(--bodyFont);
+            color: var(--darkBlack);
+            text-decoration: none;
+            display: block;
+            margin: 0px;
+            cursor: auto;
+         }
+
          .code-block {
             padding: var(--codeBlockPadding);
             justify-content: center;
 
-         }
+            }
 
+            /* Used for in paragraph code */
+            .enlighter-t-enlighter.enlighter-v-inline {
+               font-size: 15px;
+            }
+
+            /* Used for main code blocks */
             .enlighter-t-atomic {
                padding: 25px 0px;
                margin: 0px 2.5%;

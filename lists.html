@@ -15,114 +15,184 @@
 	</head>
 
 	<body>
-		<header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
-         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
-         <nav>
-            <ul class="nav-links">
-               <li><a class="link home-page" href="">Home</a></li>
-               <li><p class="yellow link dropdown">Tutorials</p></li> <!-- Anchor tag to tutorial cards -->
-            </ul>
-         </nav>
-      </header>
-		<div class="dropdown-content">
-			<ul class="site-map">
-				<li><a class="yellow link loops-page" href="">Loops</a></li>
-				<li><a class="yellow link try-except-page" href="">Try & Except</a></li>
-				<li><a class="yellow link lists-page" href="">Lists</a></li>
-				<li><a class="yellow link functions-page" href="">Functions</a></li>
-				<li><a class="yellow link classes-page" href="">Classes</a></li>
-			</ul>
-		</div>
+		<div id="body-wrapper">
 
-      <div class="title-page">
+			<header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+	         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+	         <nav>
+	            <ul class="nav-links">
+	               <li><a class="link home-page" href="">Home</a></li>
+	               <li><p class="yellow link dropdown">Tutorials</p></li> <!-- Anchor tag to tutorial cards -->
+	            </ul>
+	         </nav>
+	      </header>
+			<div class="dropdown-content">
+				<ul class="site-map">
+					<li><a class="yellow link loops-page" href="">Loops</a></li>
+					<li><a class="yellow link try-except-page" href="">Try & Except</a></li>
+					<li><a class="yellow link lists-page" href="">Lists</a></li>
+					<li><a class="yellow link functions-page" href="">Functions</a></li>
+					<li><a class="yellow link classes-page" href="">Classes</a></li>
+				</ul>
+			</div>
 
-         <div class="tutorial-title-container">
-            <h1 class="tutorial-title-text">Lists in Python</h1>
-            <p class="tutorial-desc"><green>Easy</green> to <orange>Medium</orange> <x>-</x> Iterating through lists, Modifying lists & 2D lists</p>
-         </div>
+	      <div class="title-page">
+
+	         <div class="tutorial-title-container">
+	            <h1 class="tutorial-title-text">Lists in Python</h1>
+	            <p class="tutorial-desc"><green>Easy</green> to <orange>Medium</orange> <x>-</x> Iterating through lists, Modifying lists & 2D lists</p>
+	         </div>
 
 
-      </div>
+	      </div>
 
-      <div class="tutorial-container">
-         <h2 class="subheader">Iterating Through a List</h2>
-         <p>...</p>
-         <p>...</p>
-         <br>
-         <p>...</p>
+	      <div class="tutorial-container">
+	         <h2 class="subheader">The Basics</h2>
+	         <p>A list in Python is a sequence of items. We write this sequence in between square brackets, separating the items using a comma. As shown below.</p>
+	         <p>The items in a list can be of any type (including lists themselves). So, the following are all valid lists.</p>
 
-         <div class="code-block">
-           <pre >
-# there are two ways of doing this, here is the more complected way:
+	         <div class="code-block">
+	           <pre >
+empty_list = []  # here is an empty list being asigned to a vairable
+list_with_numbers = [1, 2, 3]  # as you can see here we are seperating the items using commas
+another_list = [ [19, 'September'], [20, 'September'] ]  # here is a multi dimensional list
+	           </pre>
+	         </div>
+
+	         <p>The order of items in a list is important, as is the number of items in a list.</p>
+				<p class="list-title">We can:</p>
+				<ul class="tutorial-list">
+					<li>Add new items to a list</li>
+					<li>Remove items from a list</li>
+					<li>Change the order of items in the list</li>
+				</ul>
+
+				<p>Think of a list like a variable, except that it can have multiple values stored inside it. For example a variable called name might have the value 'Hone' stored in it, a list called names might have the values 'Hone', 'Kate', 'Fariha' and 'Yang' stored in it.</p>
+
+	         <div class="code-block">
+	           <pre>
+name = 'Hone'
+names = ['Hone', 'Kate', 'Fariha', 'Yang']
+	           </pre>
+	         </div>
+
+				<p>As shown in the first example, lists can store data of different types as well. We could store some text (a string) as well as some integers, floats and boolean values.</p>
+
+				<div class="code-block">
+	           <pre>
+my_list = ['Pizza', 3.14, 8, True]
+	           </pre>
+	         </div>
+
+	         <h2 class="subheader">Accessing values in a list</h2>
+	         <p>One of the most important things that we need to do with a list is to access the individual items in it. We use the index to do this. If <code data-enlighter-theme="enlighter">l</code> is a list and <code data-enlighter-theme="enlighter">l</code> is a number then <code data-enlighter-theme="enlighter">l[i]</code> is an item of <code data-enlighter-theme="enlighter">l</code>.</p>
+	         <p>Each item in a list has an index, or a number associated with it. The numbers are sequential with the first item in the list being associated with the number 0. This means that if there are 8 items in a list the number associated with the last item will be 7. Confusing huh?</p>
+				<p>So say we wanted to print Kate's name from the names list. We know her name is in the second position in the list, so starting from 0 the second number is 1. So we would write:</p>
+
+	         <div class="code-block">
+	           <pre data-enlighter-linenumbers="false">
+>>>  names = ['Hone', 'Kate', 'Fariha', 'Yang']
+>>>  print(names[1])
+>>>  'Kate'
+>>>  print(names[-1])  # you can also start from the back of the list by using a negitive index value
+>>>  'Yang'
+	           </pre>
+	         </div>
+
+				<p>The square brackets after the list name contain the index (or location) in the list that we are accessing.</p>
+
+
+				<h2 class="subheader">Traversing a List</h2>
+				<p>Often we will want to process the elements in a list one-by-one building up a value as we go along (called a fold). The code will typically look like this:</p>
+
+				<div class="code-block">
+	           <pre>
+# there are two ways of doing this, the more complected way:
 big_five = ['elephant', 'lion', 'rhino', 'leopard', 'buffalo']
 
 for i in range(len(big_five)):
-   # uses the index value of the list to print iterate through the list
+   # uses the index value of the list to iterate through the list
    print(big_five[i])
 
 # if you wanted an eaiser way, here it is
 for animal in big_five:
    print(animal)
-           </pre>
-         </div>
+	           </pre>
+	         </div>
 
-         <p>Another example of for loops being used are in <blue>nested loops</blue>. This is when you put a for loop inside another for loop. Hence the name "nested".</p>
+				<h2 class="subheader">Adding & Removing From a List</h2>
+				<h3>Modifying a Value in a List</h3>
+				<p>If we know the index of the item we want to edit in the list we can change its value, just as we would do with a variable.</p>
 
-         <div class="code-block">
-           <pre>
-origins = ["tree", "bush", "plant"]
-fruits = ["pear", "blackberry", "strawberry"]
+				<div class="code-block">
+	           <pre data-enlighter-linenumbers="false">
+# declares a list called 'ducks' consisting of mixed datatypes
+>>>  ducks = ["Huey", True, "Duey", False]
+# change the value of the item in the list 'ducks' with the index of 2
+>>>  ducks[2] = "Dewey"
+>>>  print(ducks)
+["Huey", True, "Dewey", False]
+	           </pre>
+	         </div>
 
-for fruit in fruits:
-   for origin in origins:  # loop nested inside another loop
-      print(f"An {fruit} grows on a {origin}")
-           </pre>
-         </div>
+				<h3>Adding new values to a list</h3>
+				<p>We can add a new value to the end of our list by using the <code data-enlighter-theme="enlighter">append()</code> function</p>
 
-         <h2 class="subheader">While Loops</h2>
-         <p>As for a while loop, here are the basics to that.</p>
-         <p>A while loop will run the block of code untill as long as a contion is met. A very simple example of this is an infinate while loop, it will continue running the block of code and will never stop since the condition is always being met. </p>
+				<div class="code-block">
+	           <pre data-enlighter-linenumbers="false">
+# declares a list called 'ducks' consisting of mixed datatypes
+>>>  ducks = ["Huey", True, "Dewey", False]
+# adds an item to the end of the list
+>>>  ducks.append("Louie")
+>>>  print(ducks)
+["Huey", True, "Dewey", False, "Louie"]
+	           </pre>
+	         </div>
 
-         <div class="code-block">
-           <pre>
-# the condition "True" is always true and cannot be changed. Hence making it an infiniate loop
-while True:
-   print("Infinate loop!")
-           </pre>
-         </div>
+				<h3>Inserting a new value into the list</h3>
+	         <p>We can also choose where we can add an item into a list by using the <code data-enlighter-theme="enlighter">insert()</code> function. <code data-enlighter-theme="enlighter">insert()</code> takes 2 arguments, the index position and the value, in that order. Everything else in the list will shift as the list expands.</p>
 
-			<p>Here is a more common example of a while loop.</p>
-			<p>This loop will continue to execute the block of code while the condition of age if between the values of 13 and 19. Once age exceded this, the condition is no longer met, ending the loop.</p>
+				<div class="code-block">
+	           <pre data-enlighter-linenumbers="false">
+#declares a list called 'ducks' consisting of mixed datatypes
+>>>  ducks = ["Huey", True, "Dewey", False, "Louie"]
+#adds an item to a specific index value inside the list
+>>>  ducks.insert(0, "Donald")
+>>>  print(ducks)
+["Donald", "Huey", True, "Dewey", False, "Louie"]
+	           </pre>
+	         </div>
 
-			<div class="code-block">
-           <pre>
-age = 13
-while age >= 13 and age <= 19: # here is the conditional statement.
-   # while the age is between the values of 13 and 19 everything in the loop will run
-   print("I am a teenager ", age)
-   age += 1
-           </pre>
-         </div>
+				<h3>Removing items from a list</h3>
+				<p>If we know the index value of the item we are looking to remove we can use the <code data-enlighter-theme="enlighter">del()</code> function. The list will contract to account for the removed item.</p>
 
-			<h3>While Else Loops</h3>
-			<p>Building upon the while loops, you can also add an else clause as you would do with an if statement. The else clause will run once the while loop is finished.</p>
+				<div class="code-block">
+	           <pre data-enlighter-linenumbers="false">
+#declares a list called 'ducks' consisting of mixed datatypes
+>>>  ducks = ["Donald", "Huey", True, "Dewey", False, "Louie"]
+#deletes an item from a specific index value in the list
+>>>  del ducks[2]
+>>>  print(ducks)
+["Donald", "Huey", "Dewey", False, "Louie"]
+	           </pre>
+	         </div>
 
-			<div class="code-block">
-           <pre>
-# here is an example of a while else statement
-iteration = 0
-while iteration != 3:
-   print(iteration, "Inside while loop")
-   iteration += 1
-else:  # runs once the while loop finishes
-   print("Inside else clause")
-           </pre>
-         </div>
+				<p>Finally we can remove an item from the list by its value. Warning, this removes the first matching value.</p>
 
-         <p>And there you go, that is basicly all of the techniques related to loops you need in order to progress through 11DIT with ease. Check out the rest of the tutorials from the menu above. </p>
+				<div class="code-block">
+	           <pre data-enlighter-linenumbers="false">
+#declares a list called 'ducks' of mixed datatypes
+>>>  ducks = ["Donald", "Huey", True, "Dewey", True, "Louie"]
+#removes the first instance of a value in a list
+>>>  ducks.remove(True)
+>>>  print(ducks)
+["Donald", "Huey", "Dewey", True, "Louie"]
 
-      </div>
+	           </pre>
+	         </div>
 
+	      </div>
+		</div>
 
 		<footer> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
          <nav>
