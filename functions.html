@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Functions in Python</title>
+
+		<meta name="description" content=" ... ">
+      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png">
+
+      <!-- Code Blocks CSS library (EnlighterJS) -->
+      <link rel="stylesheet" href="css/enlighterjs.min.css" />
+      <!-- Linking to CSS style sheets -->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="body-wrapper">
+
+			<header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+	         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+	         <nav>
+	            <ul class="nav-links">
+	               <li><a class="link home-page" href="">Home</a></li>
+	               <li><p class="yellow link dropdown">Tutorials</p></li> <!-- Anchor tag to tutorial cards -->
+	            </ul>
+	         </nav>
+	      </header>
+			<div class="dropdown-content">
+				<ul class="site-map">
+					<li><a class="yellow link loops-page" href="">Loops</a></li>
+					<li><a class="yellow link try-except-page" href="">Try & Except</a></li>
+					<li><a class="yellow link lists-page" href="">Lists</a></li>
+					<li><a class="yellow link functions-page" href="">Functions</a></li>
+					<li><a class="yellow link classes-page" href="">Classes</a></li>
+				</ul>
+			</div>
+
+	      <div class="title-page">
+
+	         <div class="tutorial-title-container">
+	            <h1 class="tutorial-title-text">Functions in Python</h1>
+	            <p class="tutorial-desc"><orange>Medium</orange> <x>-</x> Callable Blocks of Code</p>
+	         </div>
+
+
+	      </div>
+
+	      <div class="tutorial-container">
+	         <h2 class="subheader">The Basics</h2>
+				<h3>Creating a Function</h3>
+	         <p>A function is a block of code that will only run once call apon. You can pass data such as strings, integers, floats, booliens and more through a function.</p>
+	         <p>As a result of this, functions are able to also return data. </p>
+				<br>
+				<p>So how do we create a function?</p>
+				<p>Functions are created by using <code data-enlighter-theme="enlighter">def</code> followed by the name of the function. As demonstrated below:</p>
+
+	         <div class="code-block">
+	           <pre>
+def greeting():
+   print(f"Hello, welcome to the functions tutorial")
+	           </pre>
+	         </div>
+
+				<h3>Calling a Function</h3>
+				<p>Calling a function is as easy as adding two round brackets to the end of a word.</p>
+
+	         <div class="code-block">
+	           <pre>
+def greeting():
+   print(f"Hello, welcome to the functions tutorial")
+
+greeting()
+>>>  "Hello, welcome to the functions tutorial"
+	           </pre>
+	         </div>
+
+				<h3>Passing Arguments Through a Function</h3>
+				<p>As mentioned above, you are able to pass infomation through functions, these are known as arguments.</p>
+				<p>Arguments are specified in between the round brackets when defining the function. You are allowed to pass as many arguments as you want, all you need to do is make sure they are seperated by commas. Here's an example:</p>
+
+	         <div class="code-block">
+	           <pre>
+def greeting(name, age):
+   print(f"Hello, {name}. Welcome to the functions tutorial")
+   print(f"From the data I've gathered, you are {age} years old")
+
+greeting('James', 17)
+>>>  "Hello, James. Welcome to the functions tutorial"
+>>>  "From the data I've gathered, you are 17 years old"
+	           </pre>
+	         </div>
+
+				<p>Here's another example using of passing data through a function:</p>
+
+				<div class="code-block">
+	           <pre>
+def multiply_by_pi(number):
+   pi = 3.14159265359
+  # by using the return method, the function then sets the vairable to that value
+   return number * pi
+
+result = multiply_by_pi(15)
+print(result)
+>>>  47.1238898038
+	           </pre>
+	         </div>
+
+				<p>There you go, you should now understand the basics of functions in Python. Have a go at creating one of your own function using <a class="repl-link "href="" target="_blank">repl.it</a>. It's a super convenient online Python interpreter.</p>
+
+	      </div>
+
+		</div>
+
+		<footer> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+         <nav>
+            <ul class="nav-links">
+               <li><a class="link home-page" href="">Home</a></li>
+					<li id="footer-logo-text" ><a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+               <li><a id="yellow" class="link" href="#">Tutorials</a></li>
+            </ul>
+				<!-- Site map tutorial pages -->
+				<ul class="site-map">
+               <li><a class="loops-page" href="">Loops</a></li>
+					<li><a class="try-except-page" href="">Try & Except</a></li>
+               <li><a class="lists-page" href="">Lists</a></li>
+					<li><a class="functions-page" href="">Functions</a></li>
+					<li><a class="classes-page" href="">Classes</a></li>
+            </ul>
+         </nav>
+      </footer>
+
+	</body>
+
+   <!-- Code Blocks javascript library (EnlighterJS) -->
+   <script type="text/javascript" src="scripts/enlighterjs.min.js"></script>
+   <!-- JQuery javascript library (connects to the online library)-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script type="text/javascript">
+      // INIT CODE - simple page-wide initialization based on css selectors
+      // - highlight all pre + code tags (CSS3 selectors)
+      // - use javascript as default language
+      // - use theme "enlighter" as default theme
+      // - replace tabs with 2 spaces
+      EnlighterJS.init('pre', 'code', {
+            language : 'python',
+            theme: 'atomic',
+            indent : 4
+      });
+    </script>
+   <!-- My javascript file -->
+   <script type="text/javascript" src="scripts/scripts.js"></script>
+
+</html>
