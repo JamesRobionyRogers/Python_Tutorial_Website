@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Python in 11DIT</title>
+
+		<meta name="description" content=" ... ">
+      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png">
+
+      <!-- Code Blocks CSS library (EnlighterJS) -->
+      <link rel="stylesheet" href="css/enlighterjs.min.css" />
+      <!-- Linking to CSS style sheets -->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="body-wrapper">
+
+			<header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+	         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+	         <nav>
+	            <ul class="nav-links">
+	               <li><a class="link home-page" href="">Home</a></li>
+	               <li><p class="yellow link dropdown">Tutorials</p></li> <!-- Anchor tag to tutorial cards -->
+	            </ul>
+	         </nav>
+	      </header>
+			<div class="dropdown-content">
+				<ul class="site-map">
+					<li><a class="yellow link loops-page" href="">Loops</a></li>
+					<li><a class="yellow link try-except-page" href="">Try & Except</a></li>
+					<li><a class="yellow link lists-page" href="">Lists</a></li>
+					<li><a class="yellow link functions-page" href="">Functions</a></li>
+					<li><a class="yellow link classes-page" href="">Classes</a></li>
+				</ul>
+			</div>
+
+	      <div class="title-page">
+
+	         <div class="tutorial-title-container">
+	            <h1 class="tutorial-title-text">Try & Except in Python</h1>
+	            <p class="tutorial-desc"><green>Easy</green> <x>-</x> Used In Creating Robust Code</p>
+	         </div>
+
+
+	      </div>
+
+	      <div class="tutorial-container">
+	         <h2 class="subheader">Robust Code</h2>
+	         <p>Being a good programmer doesn't just mean following good programming conventions, it also means considering user input and considering cases where invalid inputs are not accepted by our programming.</p>
+	         <p>Take this line of code as an example, we want our user to enter an integer for some reason:</p>
+
+				<div class="code-block">
+	           <pre>
+number = int(input("Please enter an integer: "))
+	           </pre>
+	         </div>
+
+	         <p>If the user enters in the string "five" for example, or even "5.1", these inputs are both numbers but not valid inputs for our program. Python will throw an error into the shell as follows:</p>
+
+				<div class="error-message">
+					<pre data-enlighter-linenumbers="false">
+ >>> 'Please enter an integer:'  five
+		         </pre>
+
+		 			<div class="error-msg">
+		 				<pre data-enlighter-linenumbers="false" data-enlighter-theme="dracula">
+ Traceback (most recent call last):
+   File "< pyshell#0 >", line 1, in < module >
+     number = int(input("please: "))
+ ValueError: invalid literal for int() with base 10: 'five'
+		 				</pre>
+					</div>
+				</div>
+
+				<p>This is not a good error for our user to see. This is where we can use try and except. Try and Except does allow for specific errors to be targeted but for the purposes of Level 1, any case where using the code run in try throws an error, we use code in except to stop the program from throwing an exception, giving meaningful feedback to the user.</p>
+
+	         <div class="code-block">
+	           <pre>
+try:
+	number = int(input("Please enter an integer: "))
+except:
+	print("You didn't enter a valid integer")
+	           </pre>
+	         </div>
+
+				<p>Now in the case where the user will enter in a value that is not an integer, the next line will print out.</p>
+
+				<div class="code-block">
+	           <pre data-enlighter-linenumbers="false">
+>>>  "Please enter an integer:"  five
+>>>  "You didn't enter a valid integer"
+					</pre>
+	         </div>
+
+				<p>The only problem is that our program will end after the except. How can we write our program to force our user to enter a valid input?</p>
+				<p>If you guess by using a while loop you'd be right!</p>
+
+				<div class="code-block">
+	           <pre>
+again = True
+
+while again:
+	try:
+      number = int(input("Please enter an integer: "))
+	  again = False
+	except:
+	  print("You didn't enter a valid integer")
+					</pre>
+	         </div>
+
+				<p>Now you know the basics of try and except statements</p>
+
+      	</div>
+
+		</div>
+
+		<footer> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+         <nav>
+            <ul class="nav-links">
+               <li><a class="link home-page" href="">Home</a></li>
+					<li id="footer-logo-text" ><a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+               <li><a id="yellow" class="link" href="#">Tutorials</a></li>
+            </ul>
+				<!-- Site map tutorial pages -->
+				<ul class="site-map">
+               <li><a class="loops-page" href="">Loops</a></li>
+					<li><a class="try-except-page" href="">Try & Except</a></li>
+               <li><a class="lists-page" href="">Lists</a></li>
+					<li><a class="functions-page" href="">Functions</a></li>
+					<li><a class="classes-page" href="">Classes</a></li>
+            </ul>
+         </nav>
+      </footer>
+
+	</body>
+
+   <!-- Code Blocks javascript library (EnlighterJS) -->
+   <script type="text/javascript" src="scripts/enlighterjs.min.js"></script>
+   <!-- JQuery javascript library (connects to the online library)-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script type="text/javascript">
+      // INIT CODE - simple page-wide initialization based on css selectors
+      // - highlight all pre + code tags (CSS3 selectors)
+      // - use javascript as default language
+      // - use theme "enlighter" as default theme
+      // - replace tabs with 2 spaces
+      EnlighterJS.init('pre', 'code', {
+            language : 'python',
+            theme: 'atomic',
+            indent : 4
+      });
+    </script>
+   <!-- My javascript file -->
+   <script type="text/javascript" src="scripts/scripts.js"></script>
+
+</html>

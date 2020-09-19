@@ -18,6 +18,7 @@
    --darkBlue: #24252A;
    --darkBlack: #0D0D0D;
    --snowWhite: #FFFAFA;
+   --errorRed: #CC4144;
 
    --mainTextColour: white;
    --secoundaryTextColour: black;
@@ -336,7 +337,7 @@ body{margin: 0px; padding: 0px; position: relative;}
             cursor: auto;
          }
 
-         .code-block {
+         .code-block, .error-message {
             padding: var(--codeBlockPadding);
             justify-content: center;
 
@@ -348,10 +349,35 @@ body{margin: 0px; padding: 0px; position: relative;}
             }
 
             /* Used for main code blocks */
-            .enlighter-t-atomic {
+            .enlighter-t-atomic, .enlighter-t-dracula {
                padding: 25px 0px;
                margin: 0px 2.5%;
                border-radius: 5px;
+            }
+
+            /* Styling for error message theme to reduce margin */
+            .enlighter-t-dracula {
+               padding: 0px 0px 25px 10px;
+               border-radius: 0px 0px 5px 5px;
+            }
+
+            /* Connecting the top code with the bottom error message */
+            .error-message .enlighter-t-atomic {
+               padding: 25px 0px 10px 0px;
+               /* Connecting the top code with the bottom error message */
+               border-radius: 5px 5px 0px 0px;
+            }
+
+            /* Styling text for error message theme */
+            .enlighter-t-dracula span.enlighter-text,
+            .enlighter-t-dracula span.enlighter-m0,
+            .enlighter-t-dracula span.enlighter-g1,
+            .enlighter-t-dracula span.enlighter-s0,
+            .enlighter-t-dracula span.enlighter-n1,
+            .enlighter-t-dracula span.enlighter-k0,
+            .enlighter-t-dracula span.enlighter-k1 {
+               color: var(--errorRed);
+               font-weight: 600;
             }
 
 
