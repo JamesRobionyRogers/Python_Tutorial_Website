@@ -47,14 +47,13 @@ $(document).ready(function(){
       $('.dropdown-content').slideUp();
    });
 
+
    // Sticking footer to the bottom of the page  -  Sourced from: https://www.youtube.com/watch?v=Sau3hn7zEUY
-   let bodyHeight = $(document).outerHeight();
-   alert(bodyHeight);
+   let bodyHeight = $(document).outerHeight();  // gets the full document height .outerHeight() includeds all margins and padding
    let footerHeight = $('footer').outerHeight();
 
-   // Check the video for the body-wrapper
    let bodyWrapperHeight = bodyHeight - footerHeight;
-   $('#body-wrapper').css('height', `${bodyWrapperHeight}px`);
-
+   // setting the body wrapper height
+   $('#body-wrapper').css('height', `${bodyWrapperHeight}px`);  // `` is basicly an f string in python
 
 });

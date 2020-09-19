@@ -16,36 +16,38 @@
 	</head>
 
 	<body>
-		<header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
-         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
-         <nav>
-            <ul class="nav-links">
-               <li><a class="link home-page" href="">Home</a></li>
-               <li><p class="yellow link dropdown">Tutorials</p></li> <!-- Anchor tag to tutorial cards -->
-            </ul>
-         </nav>
-      </header>
-		<div class="dropdown-content">
-			<ul class="site-map">
-				<li><a class="yellow link loops-page" href="">Loops</a></li>
-				<li><a class="yellow link try-except-page" href="">Try & Except</a></li>
-				<li><a class="yellow link lists-page" href="">Lists</a></li>
-				<li><a class="yellow link functions-page" href="">Functions</a></li>
-				<li><a class="yellow link classes-page" href="">Classes</a></li>
-			</ul>
-		</div>
+		<div id="body-wrapper">
 
-      <div class="title-page">
+			<header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+	         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+	         <nav>
+	            <ul class="nav-links">
+	               <li><a class="link home-page" href="">Home</a></li>
+	               <li><p class="yellow link dropdown">Tutorials</p></li> <!-- Anchor tag to tutorial cards -->
+	            </ul>
+	         </nav>
+	      </header>
+			<div class="dropdown-content">
+				<ul class="site-map">
+					<li><a class="yellow link loops-page" href="">Loops</a></li>
+					<li><a class="yellow link try-except-page" href="">Try & Except</a></li>
+					<li><a class="yellow link lists-page" href="">Lists</a></li>
+					<li><a class="yellow link functions-page" href="">Functions</a></li>
+					<li><a class="yellow link classes-page" href="">Classes</a></li>
+				</ul>
+			</div>
 
-         <div class="tutorial-title-container">
-            <h1 class="tutorial-title-text">Loops in Python</h1>
-            <p class="tutorial-desc"><green>Easy</green> <x>-</x> For Loops, While Loops</p>
-         </div>
+	      <div class="title-page">
+
+	         <div class="tutorial-title-container">
+	            <h1 class="tutorial-title-text">Loops in Python</h1>
+	            <p class="tutorial-desc"><green>Easy</green> <x>-</x> For Loops, While Loops</p>
+	         </div>
 
 
-      </div>
+	      </div>
 
-      <div class="tutorial-container">
+	      <div class="tutorial-container">
          <h2 class="subheader">For Loops</h2>
          <p>For loops are used to iterate through sequences. These sequences can come in the form of: lists, tuples, dictionaries, sets or strings.</p>
          <p>Using a for loop we can execute a block of code for every iteration of a sequence.</p>
@@ -62,52 +64,52 @@ for fruit in fruits:
 # This for loop is known as a counting loop, as it iterates from the numbers 1, through to 5
 for counting in range(1, 5):
    print(counting)
-           </pre>
-         </div>
+	           </pre>
+	         </div>
 
-         <p>Another example of for loops being used are in <blue>nested loops</blue>. This is when you put a for loop inside another for loop. Hence the name "nested".</p>
+	         <p>Another example of for loops being used are in <blue>nested loops</blue>. This is when you put a for loop inside another for loop. Hence the name "nested".</p>
 
-         <div class="code-block">
-           <pre>
+	         <div class="code-block">
+	           <pre>
 origins = ["tree", "bush", "plant"]
 fruits = ["pear", "blackberry", "strawberry"]
 
 for fruit in fruits:
    for origin in origins:  # loop nested inside another loop
       print(f"An {fruit} grows on a {origin}")
-           </pre>
-         </div>
+	           </pre>
+	         </div>
 
-         <h2 class="subheader">While Loops</h2>
-         <p>As for a while loop, here are the basics to that.</p>
-         <p>A while loop will run the block of code untill as long as a contion is met. A very simple example of this is an infinate while loop, it will continue running the block of code and will never stop since the condition is always being met. </p>
+	         <h2 class="subheader">While Loops</h2>
+	         <p>As for a while loop, here are the basics to that.</p>
+	         <p>A while loop will run the block of code untill as long as a contion is met. A very simple example of this is an infinate while loop, it will continue running the block of code and will never stop since the condition is always being met. </p>
 
-         <div class="code-block">
-           <pre>
+	         <div class="code-block">
+	           <pre>
 # the condition "True" is always true and cannot be changed. Hence making it an infiniate loop
 while True:
    print("Infinate loop!")
-           </pre>
-         </div>
+	           </pre>
+	         </div>
 
-			<p>Here is a more common example of a while loop.</p>
-			<p>This loop will continue to execute the block of code while the condition of age if between the values of 13 and 19. Once age exceded this, the condition is no longer met, ending the loop.</p>
+				<p>Here is a more common example of a while loop.</p>
+				<p>This loop will continue to execute the block of code while the condition of age if between the values of 13 and 19. Once age exceded this, the condition is no longer met, ending the loop.</p>
 
-			<div class="code-block">
-           <pre>
+				<div class="code-block">
+	           <pre>
 age = 13
 while age >= 13 and age <= 19: # here is the conditional statement.
    # while the age is between the values of 13 and 19 everything in the loop will run
    print("I am a teenager ", age)
    age += 1
-           </pre>
-         </div>
+	           </pre>
+	         </div>
 
-			<h3>While Else Loops</h3>
-			<p>Building upon the while loops, you can also add an else clause as you would do with an if statement. The else clause will run once the while loop is finished.</p>
+				<h3>While Else Loops</h3>
+				<p>Building upon the while loops, you can also add an else clause as you would do with an if statement. The else clause will run once the while loop is finished.</p>
 
-			<div class="code-block">
-           <pre>
+				<div class="code-block">
+	           <pre>
 # here is an example of a while else statement
 iteration = 0
 while iteration != 3:
@@ -115,13 +117,13 @@ while iteration != 3:
    iteration += 1
 else:  # runs once the while loop finishes
    print("Inside else clause")
-           </pre>
-         </div>
+	           </pre>
+	         </div>
 
-         <p>And there you go, that is basicly all of the techniques related to loops you need in order to progress through 11DIT with ease. Check out the rest of the tutorials from the menu above. </p>
+	         <p>And there you go, that is basicly all of the techniques related to loops you need in order to progress through 11DIT with ease. Check out the rest of the tutorials from the menu above. </p>
 
-      </div>
-
+	      </div>
+		</div>
 
 		<footer> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
          <nav>
