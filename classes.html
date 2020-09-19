@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Classes in Python</title>
+
+		<meta name="description" content=" ... ">
+      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png">
+
+      <!-- Code Blocks CSS library (EnlighterJS) -->
+      <link rel="stylesheet" href="css/enlighterjs.min.css" />
+      <!-- Linking to CSS style sheets -->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="body-wrapper">
+
+			<header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+	         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+	         <nav>
+	            <ul class="nav-links">
+	               <li><a class="link home-page" href="">Home</a></li>
+	               <li><p class="yellow link dropdown">Tutorials</p></li> <!-- Anchor tag to tutorial cards -->
+	            </ul>
+	         </nav>
+	      </header>
+			<div class="dropdown-content">
+				<ul class="site-map">
+					<li><a class="yellow link loops-page" href="">Loops</a></li>
+					<li><a class="yellow link try-except-page" href="">Try & Except</a></li>
+					<li><a class="yellow link lists-page" href="">Lists</a></li>
+					<li><a class="yellow link functions-page" href="">Functions</a></li>
+					<li><a class="yellow link classes-page" href="">Classes</a></li>
+				</ul>
+			</div>
+
+	      <div class="title-page">
+
+	         <div class="tutorial-title-container">
+	            <h1 class="tutorial-title-text">Classes in Python</h1>
+	            <p class="tutorial-desc"><orange>Medium</orange> - <red>Hard</red> <x>-</x> Basicaly a Blueprint for Creating an Object</p>
+	         </div>
+
+
+	      </div>
+
+	      <div class="tutorial-container">
+	         <h2 class="subheader">The Basics</h2>
+				<h3>Creating a Class</h3>
+				<p>Python is an object oriented programming language. This means that Python organises software design around data or objects, rather then functions and or logic.</p>
+				<p>An object is primarily a collection of data (in the form of vairbales) and methods (more commonly known as functions) which use that data.</p>
+				<br>
+				<p>Alright, now lets cut to the chase. Lets look at how you create a class.</p>
+				<p>We start of with the word <code data-enlighter-theme="enlighter">class</code> then follow it with the name of the class. In our case it'll be <code data-enlighter-theme="enlighter">class Snake:</code></p>
+				<p>Something to note, the convention for naming classes is slightly different from functions and vairables. We tend to use title case when naming classes. This is all according to the PEP8 standard.</p>
+
+	         <div class="code-block">
+	           <pre>
+class Snake:
+	snake = "Python"
+
+print(Snake)
+>>>  "< class '__main__.Snake'>"
+	           </pre>
+	         </div>
+
+				<h3>Creating an Object</h3>
+				<p>Now that we have ceated out Snake class, we can asign it to a vairable. This now makes this vairable an object:</p>
+
+				<div class="code-block">
+	           <pre>
+python = Snake()
+print(python.snake)
+
+>>>  "Python"
+	           </pre>
+	         </div>
+
+				<h3>Using the __init__ Function</h3>
+				<p>The above examples are the most basic examples of classes. You will vertuialy never use them in that form.</p>
+				<p>All classes have a built in function called <code data-enlighter-theme="enlighter">__init__()</code> which is always run when the class in initiated. For example when it is asigned to a vairable.</p>
+				<p>We use the <code data-enlighter-theme="enlighter">__init__()</code> function to set any vairables we may want to use within the class. Here is an example</p>
+
+	         <div class="code-block">
+	           <pre>
+class Snake:
+   def __init__(self, species, colour):
+       self.species = species
+       self.colour = colour
+
+# when you asign a class to a vairable, it beomes known as an object
+python = Snake('Python', 'Blue')
+print(python.species, python.colour)
+
+>>>  "Python Blue"
+	           </pre>
+	         </div>
+
+				<h3>Methods Within an Object</h3>
+				<p>Classes can also contain methods. Methods are functions that are specific to the class</p>
+				<p>Lets create a method called <code data-enlighter-theme="enlighter">info()</code> that will display the infomation given about the snake.</p>
+
+	         <div class="code-block">
+	           <pre>
+class Snake:
+   def __init__(self, species, colour):
+      self.species = species
+      self.colour = colour
+
+   def info(self):
+      print(f"Species: {self.species}, Colour: {self.colour}")
+
+
+python = Snake('Python', 'Blue')
+python.info()
+>>>  "Species: Python, Colour: Blue"
+	           </pre>
+	         </div>
+
+				<h3>What Does self Do?</h3>
+				<p>The <code data-enlighter-theme="enlighter">self</code> parameter is a reference back to the object of the class, and is used when you need to refer to a vairble that belong to the class.</p>
+				<p><code data-enlighter-theme="enlighter">self</code> does not necessarily need to be named <code data-enlighter-theme="enlighter">self</code>. It can be whatever you want it to be, th only rule is that it must be the first parameter of any function that class.</p>
+				<p>In this example as you can see I've changed <code data-enlighter-theme="enlighter">self</code> to <code data-enlighter-theme="enlighter">object</code>. Everything still works perfectly fine. </p>
+
+				<div class="code-block">
+	           <pre>
+class Snake:
+   def __init__(object, species, colour):
+     object.species = species
+     object.colour = colour
+
+   def info(object):
+     print(f"Species: {object.species}, Colour: {object.colour}")
+
+
+python = Snake('Python', 'Blue')
+python.info()
+>>>  "Species: Python, Colour: Blue"
+	           </pre>
+	         </div>
+
+				<h3>Modifying The Properties in an Class</h3>
+				<p>You can even modify propetys of the object/class using a method.</p>
+				<p>In this example, as the method suggests, <code data-enlighter-theme="enlighter">change_colour()</code> will change the originally specified colour, to the newly specified colour.</p>
+
+				<div class="code-block">
+	           <pre>
+class Snake:
+   def __init__(self, species, colour):
+       self.species = species
+       self.colour = colour
+
+   def info(self):
+       print(f"Species: {self.species}, Colour: {self.colour}")
+
+   def change_colour(self, new_colour):
+       self.colour = new_colour
+
+
+anaconda = Snake('Anaconda', 'Green')
+anaconda.info()
+>>>  "Species: Anaconda, Colour: Green"
+
+anaconda.change_colour('Yellow')
+anaconda.info()
+>>>  "Species: Anaconda, Colour: Yellow"
+	           </pre>
+	         </div>
+
+				<p>Modifying the propetys of an object is as easy as this:</p>
+
+				<div class="code-block">
+	           <pre>
+anaconda = Snake('Anaconda', 'Green')
+
+anaconda.species = "Python"
+anaconda.colour = "Blue"
+
+anaconda.info()
+>>>  "Species: Python, Colour: Blue"
+	           </pre>
+	         </div>
+
+
+				<p>And voilà, you have now learnt the basics of classes in Python and why it is known as an object oriented programming language. Have a go at creating some of your own classes using <a class="repl-link "href="" target="_blank">repl.it</a>. Like I've said, it's a super convenient online Python interpreter.</p>
+
+	      </div>
+
+		</div>
+
+		<footer> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
+         <nav>
+            <ul class="nav-links">
+               <li><a class="link home-page" href="">Home</a></li>
+					<li id="footer-logo-text" ><a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+               <li><a id="yellow" class="link" href="#">Tutorials</a></li>
+            </ul>
+				<!-- Site map tutorial pages -->
+				<ul class="site-map">
+               <li><a class="loops-page" href="">Loops</a></li>
+					<li><a class="try-except-page" href="">Try & Except</a></li>
+               <li><a class="lists-page" href="">Lists</a></li>
+					<li><a class="functions-page" href="">Functions</a></li>
+					<li><a class="classes-page" href="">Classes</a></li>
+            </ul>
+         </nav>
+      </footer>
+
+	</body>
+
+   <!-- Code Blocks javascript library (EnlighterJS) -->
+   <script type="text/javascript" src="scripts/enlighterjs.min.js"></script>
+   <!-- JQuery javascript library (connects to the online library)-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script type="text/javascript">
+      // INIT CODE - simple page-wide initialization based on css selectors
+      // - highlight all pre + code tags (CSS3 selectors)
+      // - use javascript as default language
+      // - use theme "enlighter" as default theme
+      // - replace tabs with 2 spaces
+      EnlighterJS.init('pre', 'code', {
+            language : 'python',
+            theme: 'atomic',
+            indent : 4
+      });
+    </script>
+   <!-- My javascript file -->
+   <script type="text/javascript" src="scripts/scripts.js"></script>
+
+</html>
