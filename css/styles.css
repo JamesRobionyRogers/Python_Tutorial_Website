@@ -24,14 +24,10 @@
    --secoundaryTextColour: black;
 
    --sitePadding: 30px 10%;
-   --navPadding: 20px 10%;
-   --dropdownPadding: 0px 10% 30px 10%;
-   --dropdownLinksPadding: calc(calc(100vw - 20%) / 13.3);
    --bodyTextPadding: 10px 0px;
-   --codeBlockPadding: 10px 0px 30px 0px;
 
 
-
+   /* WEBSITE FONT PROPERTIES */
    --titleFont: 'Montserrat', sans-serif;
    --headerFont: 'Nunito Sans', sans-serif;
    --bodyFont: 'Nunito Sans', sans-serif;
@@ -45,16 +41,22 @@
    --subheaderFontSize: 30px;
    --bodyFontSize: 18px;
 
+
    /* HEADER PROPERTIES */
+   --navPadding: 20px 10%;
+   --dropdownPadding: 0px 10% 30px 10%;
+   --dropdownLinksPadding: calc(calc(100vw - 20%) / 13.3);
 
-
-   /* NAV PROPERTIES */
 
    /* CARD PROPERTIES */
    --cardHeight: 200px;
    --cardSmallWidth: 30.6%;    /* 30.6% */
    --cardWideWidth: 48%;
    --borderRadius: 5px;
+
+   /* TUTORIAL PAGE PROPERTIES */
+   --codeBlockPadding: 10px 0px 30px 0px;
+   --codeBlockBoxShadow: 0px 8px 25px 0px rgba(0,0,0,0.4);
 
    /* FOOTER */
    --footerLinkPadding: calc(calc(100vw - 20%) / 3.5);
@@ -75,7 +77,7 @@ html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizi
 
 body{margin: 0px; padding: 0px; position: relative;}
 
-   #body-wrapper, #tutorial-body-wrapper {width: 100%;}
+   #body-wrapper {width: 100%;}
 
    /* HEADER & NAV BAR STYLING */
    header, footer {
@@ -103,7 +105,7 @@ body{margin: 0px; padding: 0px; position: relative;}
             cursor: pointer;
          }
 
-         .nav-links, .site-map {
+         .nav-links, ul {
             list-style: none;
             padding: 0px;
          }
@@ -113,7 +115,7 @@ body{margin: 0px; padding: 0px; position: relative;}
             padding: 0px 20px;
          }
 
-         .nav-links li a, .site-map li a {
+         .nav-links li a {
             transition: all 0.3s ease 0s;
          }
 
@@ -121,21 +123,25 @@ body{margin: 0px; padding: 0px; position: relative;}
             color: var(--yellowAccent);
          }
 
-         .nav-links li a:hover, .site-map li a:hover {
+         .nav-links li a:hover {
             color: var(--blueAccent);
          }
+
+         /* Fixing right padding on tutorial link to make everything line up */
+         nav ul li:nth-child(2) {padding-right: 0px;}
 
       .dropdown-content {background-color: var(--darkBlue); padding: var(--dropdownPadding);}
 
          .dropdown-content a .yellow:hover {color: var(--yellowAccent);}  /* doesnt work, figure out why */
 
-         .dropdown-content ul {margin: 0px;}
+         .dropdown-content ul, .site-map ul {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            margin: 0px;
+         }
 
-         .dropdown-content .site-map li:nth-child(1) {padding: 0px var(--dropdownLinksPadding) 0px 0px; }
-
-         .dropdown-content .site-map li {padding: 0px var(--dropdownLinksPadding);}
-
-         .dropdown-content .site-map li:nth-child(5) {padding: 0px 0px 0px var(--dropdownLinksPadding); }
+         .dropdown-content ul li, .site-map ul li {padding: 0px;}
 
    .title-page {}
 
@@ -236,7 +242,7 @@ body{margin: 0px; padding: 0px; position: relative;}
          .card-small img, .card-wide img {transform: scale(2);}
       }
 
-      @media only screen and (max-width: 850px) { 
+      @media only screen and (max-width: 850px) {
          /* Reduce tutorial cards text size  */
          .card-title h1.tutorial-card-title {font-size: 30px; line-height: 35px;}
          .small-card-wrapper, .wide-card-wrapper {margin: 0px 0px 25px 0px;}
@@ -262,7 +268,6 @@ body{margin: 0px; padding: 0px; position: relative;}
          transform: translate(-50%, -50%);
          margin: 0px;
          }
-
 
 
    /* Tutorial Page Styling  */
@@ -305,7 +310,6 @@ body{margin: 0px; padding: 0px; position: relative;}
             font-family: var(--headerFont);
             font-size: var(--headerFontSize);
             font-weight: var(--headerFontWeight);
-            font-style: bold;
             padding: 15px 0px 0px 0px;
             margin: 0px;
          }
@@ -316,7 +320,6 @@ body{margin: 0px; padding: 0px; position: relative;}
             font-family: var(--headerFont);
             font-size: var(--subheaderFontSize);
             font-weight: var(--headerFontWeight);
-            font-style: bold;
             padding: 15px 0px 0px 0px;
             margin: 0px;
          }
@@ -361,7 +364,6 @@ body{margin: 0px; padding: 0px; position: relative;}
          .code-block, .error-message {
             padding: var(--codeBlockPadding);
             justify-content: center;
-
             }
 
             /* Styling for code blovks in paragraph  */
@@ -376,12 +378,15 @@ body{margin: 0px; padding: 0px; position: relative;}
                padding: 25px 0px;
                margin: 0px 2.5%;
                border-radius: 5px;
+               box-shadow: var(--codeBlockBoxShadow);
             }
+
 
             /* Styling for error message theme */
             .enlighter-t-dracula {
                padding: 0px 0px 25px 10px;
                border-radius: 0px 0px 5px 5px;
+               /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0); */
                }
 
                /* Connecting the top code with the bottom error message */
@@ -404,20 +409,18 @@ body{margin: 0px; padding: 0px; position: relative;}
                }
 
 
-   footer {justify-content: space-around; position: relative; bottom: 0; width: 80%;}
+   footer {width: 80%;}
 
-      footer .nav-links {text-align: center;}
+      footer nav {width: 100%;}
 
-      #footer-logo-text {padding: 0px;} /* padding: 0px var(--footerLinkPadding); */
+      footer ul.nav-links {display: flex; justify-content: space-between;}
 
-      footer .nav-links li:nth-child(1) {padding: 0px var(--footerLinkPadding) 0px 0px;}
+         footer ul.nav-links li {padding: 0px;}
 
-      footer .nav-links li:nth-child(3) {padding: 0px 0px 0px var(--footerLinkPadding);}
+      .site-map {display: flex; justify-content: space-between;}
 
-      .site-map {justify-content: space-around; text-align: center;}
+         .site-map ul {margin: auto; /* 16px Default */ }  /* being styled under: header, footer/nav/.dropdown-content/... */
 
-         .site-map li:nth-child(1) {padding: 0px var(--footerSiteMapPadding) 0px 0px; }
+         ul.site-map li {padding: 0px;} /* being styled under: header, footer/nav/.dropdown-content/...  */
 
-         .site-map li {padding: 0px var(--footerSiteMapPadding);}
-
-         .site-map li:nth-child(5) {padding: 0px 0px 0px var(--footerSiteMapPadding); }
+         ul.site-map a:hover {color: var(--yellowAccent);}

@@ -10,9 +10,9 @@ var classesPage = "classes.html";
 // Tutorial card vairables
 var loopsImg = "imgs/loops-card-img.png";
 var tryExceptImg = "imgs/try-except-card-img.png";
-var listsImg = "imgs/loops-card-img.png";          // var listsImg = "imgs/"
-var functionsImg = "imgs/loops-card-img.png";      // var functionsImg = "imgs/"
-var classesImg = "imgs/loops-card-img.png";        // var classesImg = "imgs/"
+var listsImg = "imgs/lists-card-img.png";          // var listsImg = "imgs/"
+var functionsImg = "imgs/functions-card-img.png";      // var functionsImg = "imgs/"
+var classesImg = "imgs/classes-card-img.png";        // var classesImg = "imgs/"
 
 
 // Link to a clear page of Repl (Online Python)
@@ -63,3 +63,9 @@ $(document).ready(function(){
    $('#body-wrapper').css('height', `${bodyWrapperHeight}px`);  // `` is basicly an f string in python
 
 });
+
+
+// Some interesting thing to try for next time:
+
+// Animate on scroll JS library:  https://michalsnik.github.io/aos/
+//
