@@ -19,7 +19,7 @@
 		<div id="body-wrapper">
 
 			<header> <!-- Nav bar inspired by https://www.youtube.com/watch?v=PwWHL3RyQgk -->
-	         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
+	         <a class="logo-text home-page" href="">PYTHON IN 11DIT</a>
 	         <nav>
 	            <ul class="nav-links">
 	               <li><a class="link home-page" href="">Home</a></li>
@@ -120,7 +120,7 @@ else:  # runs once the while loop finishes
 	           </pre>
 	         </div>
 
-	         <p>And there you go, that is basicly all of the techniques related to loops you need in order to progress through 11DIT with ease. Have a go at creating your own <code data-enlighter-theme="enlighter">for</code> and <code data-enlighter-theme="enlighter">while</code> loops using <a class="repl-link "href="" target="_blank">repl.it</a>. It's a super convenient online Python interpreter.</p>
+	         <p>And there you go, that is basicly all of the techniques related to loops you need in order to progress through 11DIT with ease. Have a go at creating your own <code data-enlighter-theme="enlighter">for</code> and <code data-enlighter-theme="enlighter">while</code> loops using <a class="repl-link" href="" target="_blank">repl.it</a>. It's a super convenient online Python interpreter.</p>
 
 	      </div>
 		</div>
@@ -130,7 +130,7 @@ else:  # runs once the while loop finishes
             <ul class="nav-links">
                <li><a class="link home-page" href="">Home</a></li>
 					<li id="footer-logo-text" ><a class="logo-text home-page" href="">PYTHON IN 11DIT</a></li>
-               <li><a id="yellow" class="link" href="#">Tutorials</a></li>
+               <li><a class="yellow link" href="#">Tutorials</a></li>
             </ul>
 				<!-- Site map tutorial pages -->
 				<ul class="site-map">
@@ -141,27 +141,28 @@ else:  # runs once the while loop finishes
 					<li><a class="classes-page" href="">Classes</a></li>
             </ul>
          </nav>
-      </footer>
+		</footer>
+
+
+
+		<!-- Code Blocks javascript library (EnlighterJS) -->
+	   <script type="text/javascript" src="scripts/enlighterjs.min.js"></script>
+	   <!-- JQuery javascript library (connects to the online library)-->
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	   <script type="text/javascript">
+	      // INIT CODE - simple page-wide initialization based on css selectors
+	      // - highlight all pre + code tags (CSS3 selectors)
+	      // - use javascript as default language
+	      // - use theme "enlighter" as default theme
+	      // - replace tabs with 2 spaces
+	      EnlighterJS.init('pre', 'code', {
+	            language : 'python',
+	            theme: 'atomic',
+	            indent : 4
+	      });
+	    </script>
+	   <!-- My javascript file -->
+	   <script type="text/javascript" src="scripts/scripts.js"></script>
 
 	</body>
-
-   <!-- Code Blocks javascript library (EnlighterJS) -->
-   <script type="text/javascript" src="scripts/enlighterjs.min.js"></script>
-   <!-- JQuery javascript library (connects to the online library)-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script type="text/javascript">
-      // INIT CODE - simple page-wide initialization based on css selectors
-      // - highlight all pre + code tags (CSS3 selectors)
-      // - use javascript as default language
-      // - use theme "enlighter" as default theme
-      // - replace tabs with 2 spaces
-      EnlighterJS.init('pre', 'code', {
-            language : 'python',
-            theme: 'atomic',
-            indent : 4
-      });
-    </script>
-   <!-- My javascript file -->
-   <script type="text/javascript" src="scripts/scripts.js"></script>
-
 </html>
