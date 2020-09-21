@@ -273,10 +273,11 @@ body{margin: 0px; padding: 0px; position: relative;}
    /* Tutorial Page Styling  */
    .tutorial-page {}
 
-      blue {color: var(--blueAccent)}
-      green {color: green;}
-      orange {color: #F26938;}
-      red {color: var(--errorRed);}
+      .blue {color: var(--blueAccent)}
+      .green {color: green;}
+      .orange {color: #F26938;}
+      .red {color: var(--errorRed);}
+      .spacer {padding: 0px 10px;}
 
       .tutorial-title-container {padding: var(--sitePadding);}
 
@@ -296,10 +297,6 @@ body{margin: 0px; padding: 0px; position: relative;}
             text-align: center;
             font-size: 18px;
             font-stretch: expanded;
-         }
-
-         .tutorial-desc x {
-            padding: 0px 10px;
          }
 
       .tutorial-container {}
