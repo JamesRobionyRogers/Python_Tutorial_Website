@@ -50,11 +50,11 @@
 	         <h2 class="subheader">The Basics</h2>
 				<h3>Creating a Class</h3>
 				<p>Python is an object oriented programming language. This means that Python organises software design around data or objects, rather then functions and or logic.</p>
-				<p>An object is primarily a collection of data (in the form of vairbales) and methods (more commonly known as functions) which use that data.</p>
+				<p>An object is primarily a collection of data (in the form of variables) and methods (more commonly known as functions) which use that data.</p>
 				<br>
-				<p>Alright, now lets cut to the chase. Lets look at how you create a class.</p>
-				<p>We start of with the word <code data-enlighter-theme="enlighter">class</code> then follow it with the name of the class. In our case it'll be <code data-enlighter-theme="enlighter">class Snake:</code></p>
-				<p>Something to note, the convention for naming classes is slightly different from functions and vairables. We tend to use title case when naming classes. This is all according to the PEP8 standard.</p>
+				<p>Alright, now let's cut to the chase. Let's look at how you create a class.</p>
+				<p>We start off with the word <code data-enlighter-theme="enlighter">class</code> then follow it with the name of the class. In our case it'll be <code data-enlighter-theme="enlighter">class Snake:</code></p>
+				<p>Something to note, the convention for naming classes is slightly different from functions and variables. We tend to use title case when naming classes. This is all according to the PEP8 standard.</p>
 
 	         <div class="code-block">
 	           <pre>
@@ -67,7 +67,7 @@ print(Snake)
 	         </div>
 
 				<h3>Creating an Object</h3>
-				<p>Now that we have ceated out Snake class, we can asign it to a vairable. This now makes this vairable an object:</p>
+				<p>Now that we have created our Snake class, we can assign it to a variable. This now makes this variable an object:</p>
 
 				<div class="code-block">
 	           <pre>
@@ -79,9 +79,9 @@ print(python.snake)
 	         </div>
 
 				<h3>Using the __init__ Function</h3>
-				<p>The above examples are the most basic examples of classes. You will vertuialy never use them in that form.</p>
-				<p>All classes have a built in function called <code data-enlighter-theme="enlighter">__init__()</code> which is always run when the class in initiated. For example when it is asigned to a vairable.</p>
-				<p>We use the <code data-enlighter-theme="enlighter">__init__()</code> function to set any vairables we may want to use within the class. Here is an example</p>
+				<p>The above examples are the most basic examples of classes. You will virtually never use them in that form.</p>
+				<p>All classes have a built in function called <code data-enlighter-theme="enlighter">__init__()</code> which is always run when the class is initiated. For example when it is asigned to a variable.</p>
+				<p>We use the <code data-enlighter-theme="enlighter">__init__()</code> function to set any variables we may want to use within the class. Here is an example</p>
 
 	         <div class="code-block">
 	           <pre>
@@ -90,7 +90,7 @@ class Snake:
        self.species = species
        self.colour = colour
 
-# when you asign a class to a vairable, it beomes known as an object
+# when you assign a class to a variable, it beomes known as an object
 python = Snake('Python', 'Blue')
 print(python.species, python.colour)
 
@@ -100,7 +100,7 @@ print(python.species, python.colour)
 
 				<h3>Methods Within an Object</h3>
 				<p>Classes can also contain methods. Methods are functions that are specific to the class</p>
-				<p>Lets create a method called <code data-enlighter-theme="enlighter">info()</code> that will display the infomation given about the snake.</p>
+				<p>Let's create a method called <code data-enlighter-theme="enlighter">info()</code> that will display the infomation given about the snake.</p>
 
 	         <div class="code-block">
 	           <pre>
@@ -120,8 +120,8 @@ python.info()
 	         </div>
 
 				<h3>What Does self Do?</h3>
-				<p>The <code data-enlighter-theme="enlighter">self</code> parameter is a reference back to the object of the class, and is used when you need to refer to a vairble that belong to the class.</p>
-				<p><code data-enlighter-theme="enlighter">self</code> does not necessarily need to be named <code data-enlighter-theme="enlighter">self</code>. It can be whatever you want it to be, th only rule is that it must be the first parameter of any function that class.</p>
+				<p>The <code data-enlighter-theme="enlighter">self</code> parameter is a reference back to the object of the class, and is used when you need to refer to a variable that belongs to the class.</p>
+				<p><code data-enlighter-theme="enlighter">self</code> does not necessarily need to be named <code data-enlighter-theme="enlighter">self</code>. It can be whatever you want it to be, the only rule is that it must be the first parameter of any function of that class.</p>
 				<p>In this example as you can see I've changed <code data-enlighter-theme="enlighter">self</code> to <code data-enlighter-theme="enlighter">object</code>. Everything still works perfectly fine. </p>
 
 				<div class="code-block">
@@ -141,8 +141,8 @@ python.info()
 	           </pre>
 	         </div>
 
-				<h3>Modifying The Properties in an Class</h3>
-				<p>You can even modify propetys of the object/class using a method.</p>
+				<h3>Modifying The Properties in a Class</h3>
+				<p>You can even modify properties of the object/class using a method.</p>
 				<p>In this example, as the method suggests, <code data-enlighter-theme="enlighter">change_colour()</code> will change the originally specified colour, to the newly specified colour.</p>
 
 				<div class="code-block">
@@ -169,7 +169,7 @@ anaconda.info()
 	           </pre>
 	         </div>
 
-				<p>Modifying the propetys of an object is as easy as this:</p>
+				<p>Modifying the properties of an object is as easy as this:</p>
 
 				<div class="code-block">
 	           <pre>
