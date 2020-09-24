@@ -1,9 +1,9 @@
 /* Importing Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Nunito+Sans:ital,wght@0,800;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito+Sans:wght@400;600;800&display=swap');
 
 /*
    font-family: 'Montserrat', sans-serif;      Weights: 900, 800, 700
-   font-family: 'Nunito Sans', sans-serif;     Weights: 900, 800, 400
+   font-family: 'Nunito Sans', sans-serif;     Weights: 900, 800, 600, 400, 300
 */
 
 
@@ -34,7 +34,8 @@
 
    --titleFontWeight: 900;
    --headerFontWeight: 800;
-   --bodyFontWeight: 400;
+   --navFontWeight: 700;
+   --bodyFontWeight: 600;
 
    --titleFontSize: 60px;
    --headerFontSize: 40px;
@@ -85,6 +86,7 @@ body{margin: 0px; padding: 0px; position: relative;}
       justify-content: space-between;
       align-items: center;
       background-color: var(--darkBlue);
+      font-weight: var(--navFontWeight);
       padding: var(--navPadding);
       }
 
@@ -130,7 +132,7 @@ body{margin: 0px; padding: 0px; position: relative;}
          /* Fixing right padding on tutorial link to make everything line up */
          nav ul li:nth-child(2) {padding-right: 0px;}
 
-      .dropdown-content {background-color: var(--darkBlue); padding: var(--dropdownPadding);}
+      .dropdown-content {background-color: var(--darkBlue); padding: var(--dropdownPadding); font-weight: var(--navFontWeight);}
 
          .dropdown-content a .yellow:hover {color: var(--yellowAccent);}  /* doesnt work, figure out why */
 
@@ -273,6 +275,7 @@ body{margin: 0px; padding: 0px; position: relative;}
    /* Tutorial Page Styling  */
    .tutorial-page {}
 
+      .blue, .green, .orange, .red {font-weight: 600;}
       .blue {color: var(--blueAccent)}
       .green {color: green;}
       .orange {color: #F26938;}
