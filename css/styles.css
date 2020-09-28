@@ -42,6 +42,9 @@
    --subheaderFontSize: 30px;
    --bodyFontSize: 18px;
 
+   /* Mobile font sizes */
+   --mobiletitleFontSize: 10vw;
+
 
    /* HEADER PROPERTIES */
    --navPadding: 20px 10%;
@@ -51,9 +54,13 @@
 
    /* CARD PROPERTIES */
    --cardHeight: 200px;
+   --mobileCardHeight: 400px;
    --cardSmallWidth: 30.6%;    /* 30.6% */
    --cardWideWidth: 48%;
+   --cardMobileWidth: 80vw;
    --borderRadius: 5px;
+   --mobileBorderRadius: 12px;
+   --mobileTutorialCardBoxShadow: var(--codeBlockBoxShadow);  /* TODO: sort box shadow for mobile tutorial cards */
 
    /* TUTORIAL PAGE PROPERTIES */
    --codeBlockPadding: 10px 0px 30px 0px;
@@ -323,7 +330,6 @@ body{margin: 0px; padding: 0px; position: relative;}
             padding: 15px 0px 0px 0px;
             margin: 0px;
          }
-      }
 
          /* .italic {font-style: italic;}  */
 
@@ -435,6 +441,50 @@ and (max-device-width: 812px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
 
-  /* Chnage tutorial card widths and stack them one on top of each other */
+   #INDEX-PAGE{}
+
+      .title-page {}
+
+         #title-container h1 {
+            display: block;
+            font-size: var(--mobiletitleFontSize);
+         }
+
+         #title-container img {display: none;}
+
+
+      .tutorial-cards {}
+
+         /* Adjusting tutorial card width - Stacking one on top of each other */
+         .small-card-wrapper, .wide-card-wrapper {width: var(--cardMobileWidth);}
+
+         /* Adjusting tutorial card title font size */
+         .card-title h1.tutorial-card-title {font-size: 10vw; line-height: normal; width: 100%;}
+
+         /* Styling border radius */
+         .small-card-wrapper, .wide-card-wrapper {border-radius: var(--mobileBorderRadius);}
+         .card-container {border-radius: var(--mobileBorderRadius);}
+         .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight);}
+         .card-small img, .card-wide img {transform: scale(1.5); border-radius: var(--mobileBorderRadius); }
+
+         /* Styling drop shadows */
+         .small-card-wrapper, .wide-card-wrapper {box-shadow: var(--mobileTutorialCardBoxShadow);}
+
+   #TUTORIAL-PAGES{}
+
+      .title-page {}
+
+         h1.tutorial-title-text {
+            display: block;
+            font-size: 9.4vw; var(--mobile)
+         }
+
+      .code-block {}
+
+         /* Code Block line number padding  */
+         .enlighter-t-atomic.enlighter-linenumbers div.enlighter>div::before {padding: 1px 5px 1px 10px;}
+
+         /* Code Block line number width */
+         .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
 
 }

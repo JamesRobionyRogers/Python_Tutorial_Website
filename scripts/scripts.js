@@ -10,9 +10,9 @@ var classesPage = "classes.html";
 // Tutorial card vairables
 var loopsImg = "imgs/loops-card-img.png";
 var tryExceptImg = "imgs/try-except-card-img.png";
-var listsImg = "imgs/lists-card-img.png";          // var listsImg = "imgs/"
-var functionsImg = "imgs/functions-card-img.png";      // var functionsImg = "imgs/"
-var classesImg = "imgs/classes-card-img.png";        // var classesImg = "imgs/"
+var listsImg = "imgs/lists-card-img.png";
+var functionsImg = "imgs/functions-card-img.png";
+var classesImg = "imgs/classes-card-img.png";
 
 
 // Link to a clear page of Repl (Online Python)
@@ -45,7 +45,7 @@ $(document).ready(function(){
 
    // toggles between sliding down/up accordingly when clicking "Tutorials"
    $('.dropdown').click(function () {
-      $('.dropdown-content').slideToggle();  // did have at just .slideUp()
+      $('.dropdown-content').slideToggle();
    });
 
    // slides up the dropdown if clicking outside of the header/dropdown div
@@ -54,13 +54,28 @@ $(document).ready(function(){
    });
 
 
-   // Sticking footer to the bottom of the page  -  Sourced from: https://www.youtube.com/watch?v=Sau3hn7zEUY
-   let bodyHeight = $(document).outerHeight();  // gets the full document height .outerHeight() includeds all margins and padding
+   // setting page vairbles
+   let bodyHeight = $(document).outerHeight();
    let footerHeight = $('footer').outerHeight();
 
-   let bodyWrapperHeight = bodyHeight - footerHeight;
-   // setting the body wrapper height
-   $('#body-wrapper').css('height', `${bodyWrapperHeight}px`);  // `` is basicly an f string in python
+   // Defigning updateFooter function
+   var updateFooter = function ($bodyHeight, $footerHeight) {
+         var $bodyWrapperHeight = $bodyHeight - $footerHeight;
+         $('#body-wrapper').css('height', `${$bodyWrapperHeight}px`);
+      }
+
+   // Update the footer last to account for the dropdown menu
+   updateFooter($(document).outerHeight(), $('footer').outerHeight())
+
+   // Detect screen rotation then updates the footer
+   window.addEventListener("orientationchange", function() {
+      updateFooter($(document).outerHeight(), $('footer').outerHeight())
+   }, false);
+
+   // TODO: Updates footer on screen resize
+   // cannot really find a way to do this
+
+
 
 });
 
@@ -69,3 +84,16 @@ $(document).ready(function(){
 
 // Animate on scroll JS library:  https://michalsnik.github.io/aos/
 //
+
+
+
+//                Sources used for help:
+
+// Footer at Bottom of Page:
+// https://www.youtube.com/watch?v=Sau3hn7zEUY
+
+// Screen Rotation Detection:
+// https://stackoverflow.com/questions/5498934/detect-change-in-orientation-using-javascript
+
+// Screen Resize Detection:
+// https://stackoverflow.com/questions/9828831/jquery-on-window-resize#:~:text=jQuery%20has%20a%20resize%20event,time%20the%20window%20is%20resized.
