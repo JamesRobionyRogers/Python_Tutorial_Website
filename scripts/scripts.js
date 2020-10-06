@@ -38,7 +38,47 @@ $(".classes-page img").attr("src", classesImg);
 
 
 
+// Jquery
+
 $(document).ready(function(){
+
+
+   // Hamburger Menu
+
+   let menuBtn = $('.burger');
+   let menuOpen = false;
+
+   menuBtn.click(function () {
+         if(!menuOpen) {
+            menuBtn.addClass('open');
+            menuOpen = true;
+
+            // Mobile dropdown
+            $('.dropdown-content').slideToggle();
+            $('html').addClass('static');
+
+         } else {
+            menuBtn.removeClass('open');
+            menuOpen = false;
+
+            // Mobile dropdown
+            $('.dropdown-content').slideToggle();
+            $('html').removeClass('static');
+         }
+      });
+
+   // Mobile dropdown height calc
+   let windowHeight = $(window).height();
+   let headerHeight = $('header').outerHeight();
+   let $dropdownHeight = windowHeight - headerHeight;
+   $('.dropdown-content').css('height', `${$dropdownHeight}px`);
+
+   // Dropdown ul padding calcs
+   let $dropdownUlPadding = (windowHeight - headerHeight) / 0.2
+   $('.dropdown-content ul, .site-map ul').css('height', `${$dropdownUlPadding}px`)
+
+
+
 
    // JQuery Nav Dropdown
    $('.dropdown-content').hide();  // hides the dropdown from the benginning

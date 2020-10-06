@@ -77,11 +77,12 @@
 
 .hidden {display: none;}
 .show {display: initial;}
+.static {overflow: hidden;}
 
 
 /* WEBSITE CSS BEGINS */
 
-html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--backgroundColour); color: var(--mainTextColour);}
+html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--backgroundColour); color: var(--mainTextColour); scroll-behavior: smooth;}
 
 body{margin: 0px; padding: 0px; position: relative;}
 
@@ -100,7 +101,7 @@ body{margin: 0px; padding: 0px; position: relative;}
       nav {}
 
 
-         li, a, p.dropdown {
+         li, a, p.dropdown, .bk2top-text {
             font-family: 'Montserrat', sans-serif;
             font-weight: var(--textFont);
             font-size: 16px;
@@ -138,6 +139,8 @@ body{margin: 0px; padding: 0px; position: relative;}
 
          /* Fixing right padding on tutorial link to make everything line up */
          nav ul li:nth-child(2) {padding-right: 0px;}
+
+      .burger {display: none;}
 
       .dropdown-content {background-color: var(--darkBlue); padding: var(--dropdownPadding); font-weight: var(--navFontWeight);}
 
@@ -418,6 +421,8 @@ body{margin: 0px; padding: 0px; position: relative;}
 
    footer {width: 80%;}
 
+      .bk2top {display: none;}
+
       footer nav {width: 100%;}
 
       footer ul.nav-links {display: flex; justify-content: space-between;}
@@ -443,6 +448,34 @@ and (orientation: portrait) {
 
    #INDEX-PAGE{}
 
+      .burger {display: initial;}
+
+      a.logo-text {font-size: 5vw;}
+
+      nav {display: none;}
+
+         .site-map {display: block;}
+
+         .dropdown-content ul, .site-map ul {
+            display: block;
+            padding: 10vh 0px;
+            height: 80vh;
+         }
+
+         .dropdown-content ul li, .site-map ul li {
+            display: table;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+            width: 100%;
+         }
+
+         .dropdown-content ul li a, .site-map ul li a {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 10vw;
+         }
+
       .title-page {}
 
          #title-container h1 {
@@ -464,11 +497,31 @@ and (orientation: portrait) {
          /* Styling border radius */
          .small-card-wrapper, .wide-card-wrapper {border-radius: var(--mobileBorderRadius);}
          .card-container {border-radius: var(--mobileBorderRadius);}
-         .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight);}
-         .card-small img, .card-wide img {transform: scale(1.5); border-radius: var(--mobileBorderRadius); }
-
+         .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight); transform: scale(1.1);}
+         .card-small img, .card-wide img {transform: scale(1); border-radius: var(--mobileBorderRadius); }
          /* Styling drop shadows */
          .small-card-wrapper, .wide-card-wrapper {box-shadow: var(--mobileTutorialCardBoxShadow);}
+
+
+      footer{}
+
+         .bk2top {display: initial; position: relative; height: 50px; width: 100%;}
+
+            .bk2top-text{
+               position: absolute;
+               width: 100%;
+               text-align: center;
+               vertical-align: middle;
+               font-size: 5vw;
+               top: 50%;
+               transform: translate(-2%, -50%);
+            }
+
+            .bk2top-text span {opacity: 0.5; padding: 0px 3px;}
+
+            a.bk2top, .bk2top-arrows {display: inline-block;}
+
+            .bk2top-arrows {margin: auto;}
 
    #TUTORIAL-PAGES{}
 
@@ -476,15 +529,21 @@ and (orientation: portrait) {
 
          h1.tutorial-title-text {
             display: block;
-            font-size: 9.4vw; var(--mobile)
+            font-size: 9.4vw; /* var(--mobile) */
          }
 
-      .code-block {}
+      .code-block {margin: -40px auto;}
 
          /* Code Block line number padding  */
          .enlighter-t-atomic.enlighter-linenumbers div.enlighter>div::before {padding: 1px 5px 1px 10px;}
 
          /* Code Block line number width */
          .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
+
+         .code-block .enlighter-default  {
+            transform: scale(0.55);
+            width: 170vw;
+            margin: auto auto auto -46vw;
+         }
 
 }

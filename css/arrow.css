@@ -1,0 +1,69 @@
+/* Source code: https://codepen.io/TommiTikall/pen/xZwpGR */
+
+:root {
+   --ani-speed: 2.8s;
+   --ani-delay: 0.6666s;
+
+   --minOpacity: 0;
+   --maxOpacity: 1;
+
+   --thickness: 2.5px;
+   --scale: 15px;
+}
+
+.arrow {
+    opacity: 0;
+    position: absolute;
+    left: 47.5%;
+    top: 30%;
+    transform-origin: 50% 30%;
+    transform: translate3d(-50%, -50%, 0);
+    margin: 0px 0px 10px 0px;
+}
+
+.arrow-first {
+    animation: arrow-movement var(--ani-speed) ease-in-out infinite;
+}
+.arrow-second {
+    animation: arrow-movement var(--ani-speed) var(--ani-delay) ease-in-out infinite;
+}
+.arrow-third {
+    animation: arrow-movement var(--ani-speed) calc(var(--ani-delay)*2) ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+   background: #fff;
+   content: '';
+   display: inline-block;
+   height: var(--thickness);  /* thickness of lines */
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: var(--scale); /* scale of the arrows */
+   border-radius: 3px;
+}
+
+.arrow:before {
+    transform: rotate(-45deg) translateX(-30%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(45deg) translateX(30%);
+    transform-origin: top right;
+}
+
+/* Animation */
+@keyframes arrow-movement {
+    0% {
+        opacity: var(--minOpacity);
+        top: 80%;
+    }
+    50% {
+        opacity: var(--maxOpacity);
+    }
+    100% {
+        opacity: var(--minOpacity);
+    }
+}
