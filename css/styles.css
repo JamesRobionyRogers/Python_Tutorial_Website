@@ -20,6 +20,9 @@
    --snowWhite: #FFFAFA;
    --errorRed: #CC4144;
 
+   --lightFillColour: var(--backgroundColour);
+   --darkFillColour: var(--darkBlue);
+
    --mainTextColour: white;
    --secoundaryTextColour: black;
 
@@ -79,10 +82,28 @@
 .show {display: initial;}
 .static {overflow: hidden;}
 
+.drk-mode-icon {transition: 0.4s ease-in-out; color: var(--yellowAccent);}
+/* Changed colours when changing to dark mode */
+.dark-mode-colours {
+   --backgroundColour: #24252A;
+   --blueAccent: #4087C2;
+   --yellowAccent: #F6C339;
+   --darkAccent: #333333;
+   --darkBlue: white;
+   --darkBlack: white;
+   --snowWhite: #FFFAFA;
+   --errorRed: #CC4144;
+
+   --lightFillColour: #FFFFFF;
+   --darkFillColour: #24252A;
+
+   transition: 0.4s;
+   }
+
 
 /* WEBSITE CSS BEGINS */
 
-html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--backgroundColour); color: var(--mainTextColour); scroll-behavior: smooth;}
+html{margin: 0px; padding: 0px; font-family: 'Nunito Sans', sans-serif; box-sizing: border-box; overflow-x: hidden; background-color: var(--backgroundColour); color: var(--mainTextColour); scroll-behavior: smooth; transition: 0.4s;}
 
 body{margin: 0px; padding: 0px; position: relative;}
 
@@ -93,7 +114,7 @@ body{margin: 0px; padding: 0px; position: relative;}
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: var(--darkBlue);
+      background-color: var(--darkFillColour);
       font-weight: var(--navFontWeight);
       padding: var(--navPadding);
       }
@@ -142,7 +163,7 @@ body{margin: 0px; padding: 0px; position: relative;}
 
       .burger {display: none;}
 
-      .dropdown-content {background-color: var(--darkBlue); padding: var(--dropdownPadding); font-weight: var(--navFontWeight);}
+      .dropdown-content {background-color: var(--darkFillColour); padding: var(--dropdownPadding); font-weight: var(--navFontWeight);}
 
          .dropdown-content a .yellow:hover {color: var(--yellowAccent);}  /* doesnt work, figure out why */
 
@@ -213,13 +234,14 @@ body{margin: 0px; padding: 0px; position: relative;}
          height: var(--cardHeight);
          line-height: var(--cardHeight);
          overflow: hidden;
-         transition: 0.2s;
+         transition: 0.2s ease-in-out;
          text-align: center;
          max-height: 188px;
          border-radius: var(--borderRadius);
       }
 
-      .card-small:hover, .card-wide:hover, .small-card-wrapper:hover, .wide-card-wrapper:hover {
+      .card-contaier:hover .card-small:hover, .card-wide:hover, .small-card-wrapper:hover, .wide-card-wrapper:hover {
+         /* .small-card:hover > * .small-card-wrapper, .wide-card:hover > * .wide-card-wrapper */
          transform: scale(1.05);
          box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.75);
          cursor: pointer;
@@ -437,6 +459,12 @@ body{margin: 0px; padding: 0px; position: relative;}
 
          ul.site-map a:hover {color: var(--yellowAccent);}
 
+      .drk-mode{display: initial; transition: 0.4s;}
+
+         .drk-mode:hover {transform: scale(1.25); transition: 0.4s;}
+
+         .fa-moon {transition: 0.4s ease-in-out; cursor: pointer; font-size: 20px;}
+
 
 
 /* Portrait for iPhone X, Samsung S10 :     https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
@@ -522,6 +550,9 @@ and (orientation: portrait) {
             a.bk2top, .bk2top-arrows {display: inline-block;}
 
             .bk2top-arrows {margin: auto;}
+
+         .drk-mode {}
+            .drk-mode:hover {transform: scale(1);}
 
    #TUTORIAL-PAGES{}
 
