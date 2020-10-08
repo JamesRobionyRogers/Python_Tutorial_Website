@@ -25,6 +25,11 @@ $(document).ready(function(){
    }, false);
 
 
+   // Detect window resize
+   $(window).on('resize', function(){
+      location.reload();
+   });
+ 
 
 });
 
