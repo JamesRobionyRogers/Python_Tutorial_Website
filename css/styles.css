@@ -63,7 +63,7 @@
    --cardMobileWidth: 80vw;
    --borderRadius: 5px;
    --mobileBorderRadius: 12px;
-   --mobileTutorialCardBoxShadow: var(--codeBlockBoxShadow);  /* TODO: sort box shadow for mobile tutorial cards */
+   --mobileTutorialCardBoxShadow: var(--codeBlockBoxShadow);  
 
    /* TUTORIAL PAGE PROPERTIES */
    --codeBlockPadding: 10px 0px 30px 0px;
@@ -418,8 +418,11 @@ body{margin: 0px; padding: 0px; position: relative;}
             .enlighter-t-dracula {
                padding: 0px 0px 25px 10px;
                border-radius: 0px 0px 5px 5px;
-               /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0); */
+               background-color: #272b33;
+               box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.4);
                }
+
+            .enlighter-t-dracula div.enlighter>div {background-color: #272b33;}
 
                /* Connecting the top code with the bottom error message */
                .error-message .enlighter-t-atomic {
@@ -459,7 +462,7 @@ body{margin: 0px; padding: 0px; position: relative;}
 
          ul.site-map a:hover {color: var(--yellowAccent);}
 
-      .drk-mode{display: initial; transition: 0.4s;}
+      .drk-mode{display: initial; transition: 0.4s; position: absolute; right: 0; margin-right: 4%;}
 
          .drk-mode:hover {transform: scale(1.25); transition: 0.4s;}
 
@@ -551,8 +554,11 @@ and (orientation: portrait) {
 
             .bk2top-arrows {margin: auto;}
 
-         .drk-mode {}
+         .drk-mode {margin-right: 10%;}
+
             .drk-mode:hover {transform: scale(1);}
+
+
 
    #TUTORIAL-PAGES{}
 
@@ -571,7 +577,7 @@ and (orientation: portrait) {
          /* Code Block line number width */
          .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
 
-         .code-block .enlighter-default  {
+         .code-block .enlighter-default, .error-message  {
             transform: scale(0.55);
             width: 170vw;
             margin: auto auto auto -46vw;

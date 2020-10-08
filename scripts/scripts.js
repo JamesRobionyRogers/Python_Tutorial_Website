@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
 
+   // Removing the code block toolbars
+   // $('.enlighter-toolbar').hide()
+
 
    // Calculating body-wrapper height to posision footer
    let bodyHeight = $(document).outerHeight();
