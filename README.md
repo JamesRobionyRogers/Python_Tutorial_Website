@@ -26,11 +26,9 @@
   <p align="center">
     Python in 11DIT is a tutorial website designed to help teach and demonstrate some of the key techniques used in the year 11 Python programming unit at Onslow College. Feel free to start with any of the tutorials below.
     <br />
-    <a href="https://github.com/JamisBuggerlugs/Python_Tutorial_Website"><strong>Explore the docs »</strong></a>
+    <a href="https://jamisbuggerlugs.github.io/Python_Tutorial_Website"><strong>Try out the Website »</strong></a>
     <br />
     <br />
-    <a href="https://jamisbuggerlugs.github.io/Python_Tutorial_Website/">View Website</a>
-    ·
     <a href="https://github.com/JamisBuggerlugs/Python_Tutorial_Website/issues">Report Bug</a>
     ·
     <a href="https://github.com/JamisBuggerlugs/Python_Tutorial_Website/issues">Request Feature</a>
