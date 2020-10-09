@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+   // Sourced from: https://www.youtube.com/watch?v=wodWDIdV9BY
+
 
    let darkMode = localStorage.getItem('darkMode');
    const darkModeToggle = $('.drk-mode');
@@ -30,7 +32,7 @@ $(document).ready(function(){
    }
 
    darkModeToggle.click(function () {
-         darkMode = localStorage.getItem('darkMode');
+         darkMode = localStorage.getItem('darkMode'); // updating the darkMode vairbale 
          if (darkMode !== 'enabled') {
             enableDarkMode();
 
