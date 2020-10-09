@@ -121,16 +121,16 @@ Project Link: [https://github.com/JamisBuggerlugs/Python_Tutorial_Website](https
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/JamisBuggerlugs/repo.svg?style=flat-square
-[contributors-url]: https://github.com/JamisBuggerlugs/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/JamisBuggerlugs/repo.svg?style=flat-square
-[forks-url]: https://github.com/JamisBuggerlugs/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/JamisBuggerlugs/repo.svg?style=flat-square
-[stars-url]: https://github.com/JamisBuggerlugs/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/JamisBuggerlugs/repo.svg?style=flat-square
-[issues-url]: https://github.com/JamisBuggerlugs/repo/issues
-[license-shield]: https://img.shields.io/github/license/JamisBuggerlugs/repo.svg?style=flat-square
-[license-url]: https://github.com/JamisBuggerlugs/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/jamisbuggerlugs/Python_Tutorial_Website.svg?style=flat-square
+[contributors-url]: https://github.com/JamisBuggerlugs/Python_Tutorial_Website/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/JamisBuggerlugs/Python_Tutorial_Website.svg?style=flat-square
+[forks-url]: https://github.com/JamisBuggerlugs/Python_Tutorial_Website/network/members
+[stars-shield]: https://img.shields.io/github/stars/JamisBuggerlugs/Python_Tutorial_Website.svg?style=flat-square
+[stars-url]: https://github.com/JamisBuggerlugs/Python_Tutorial_Website/stargazers
+[issues-shield]: https://img.shields.io/github/issues/JamisBuggerlugs/Python_Tutorial_Website.svg?style=flat-square
+[issues-url]: https://github.com/JamisBuggerlugs/Python_Tutorial_Website/issues
+[license-shield]: https://img.shields.io/github/license/JamisBuggerlugs/Python_Tutorial_Website.svg?style=flat-square
+[license-url]: https://github.com/JamisBuggerlugs/Python_Tutorial_Website/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/JamisBuggerlugs
 [product-screenshot]: imgs/readme-assets/desktop-home-light.png
