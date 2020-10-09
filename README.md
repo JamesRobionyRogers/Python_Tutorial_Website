@@ -11,7 +11,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -19,18 +18,18 @@
 <br />
 <p align="center">
   <a href="https://github.com/JamisBuggerlugs/Python_Tutorial_Website">
-    <img src="imgs/logo.svg" alt="Logo" width="80" height="80">
+    <img src="imgs/readme-assets/Logo.png" width=70%>
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <!-- <h3 align="center">PYTHON IN 11DIT</h3> -->
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    Python in 11DIT is a tutorial website designed to help teach and demonstrate some of the key techniques used in the year 11 Python programming unit at Onslow College. Feel free to start with any of the tutorials below.
     <br />
     <a href="https://github.com/JamisBuggerlugs/Python_Tutorial_Website"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/JamisBuggerlugs/Python_Tutorial_Website">View Demo</a>
+    <a href="https://jamisbuggerlugs.github.io/Python_Tutorial_Website/">View Website</a>
     ·
     <a href="https://github.com/JamisBuggerlugs/Python_Tutorial_Website/issues">Report Bug</a>
     ·
@@ -38,66 +37,58 @@
   </p>
 </p>
 
-
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
+___
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+I intend to develop a tutorial website that teaches students some of the advanced programming techniques used in the
+11DIT course. The purpose of this site will be to convey digital tech concepts taught in the 11DIT course at Onslow College in an easy to
+comprehend manor. The audience I will be targeting this website towards will be primarily Year 11 students studying 11DIT at Onslow
+College, however anyone with the intent to learn those concepts demonstrated are welcome.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://jamisbuggerlugs.github.io/Python_Tutorial_Website/)  -->
+#### Desktop Version
+<a href="https://jamisbuggerlugs.github.io/Python_Tutorial_Website/">
+   <p float="left" align="middle">
+     <img src="imgs/readme-assets/desktop-home-light.png" width="366" style='margin: 0.5%;'/>
+     <img src="imgs/readme-assets/desktop-home-dark.png" width="366" />
+   </p>
+</a>
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`JamisBuggerlugs`, `Python_Tutorial_Website`, `james.robiony-rogers@student.onslow.school.nz`
+#### Mobile Version (only available on Samsung Galaxy 10 & iPhone X)
+<a href="https://jamisbuggerlugs.github.io/Python_Tutorial_Website/">
+   <p float="left" align="middle">
+     <img src="imgs/readme-assets/mobile-home-light.png" width="179px" style='margin: 0.5%;'/>
+     <img src="imgs/readme-assets/mobile-home-dark.png" width="179px" />
+     <img src="imgs/readme-assets/mobile-tutorial-light.png" width="179px" style='margin: 0.5%;'/>
+     <img src="imgs/readme-assets/mobile-tutorial-dark.png" width="179px" />
+   </p>
+</a>
+
 
 
 ### Built With
 
-* []()
-* []()
-* []()
-
+* HTML
+* CSS
+* JavaScript
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+The a two ways to view the website, the first and most easiest is to view it on [GitHub Pages](https://jamisbuggerlugs.github.io/Python_Tutorial_Website/).
+Or to get a local copy up and running follow these simple steps.
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repo using Git
 ```sh
 git clone https://github.com/JamisBuggerlugs/Python_Tutorial_Website.git
 ```
-2. Install NPM packages
-```sh
-npm install
-```
+2. Download the zip file from above
+
 
 
 
@@ -106,52 +97,23 @@ npm install
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
 
+* [JQuery](https://jquery.com/)
+* [EnlighterJS](https://github.com/EnlighterJS/EnlighterJS)
+* [FontAwesome](https://fontawesome.com/)
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/JamisBuggerlugs/Python_Tutorial_Website/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
+___
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - james.robiony-rogers@student.onslow.school.nz
+James Robiony-Rogers - james.robiony-rogers@student.onslow.school.nz
 
 Project Link: [https://github.com/JamisBuggerlugs/Python_Tutorial_Website](https://github.com/JamisBuggerlugs/Python_Tutorial_Website)
 
 
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
 
 
 
@@ -171,4 +133,4 @@ Project Link: [https://github.com/JamisBuggerlugs/Python_Tutorial_Website](https
 [license-url]: https://github.com/JamisBuggerlugs/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/JamisBuggerlugs
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: imgs/readme-assets/desktop-home-light.png
