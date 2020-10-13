@@ -1,0 +1,692 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito+Sans:wght@400;600;800&display=swap');
+
+/*
+   font-family: 'Montserrat', sans-serif;      Weights: 900, 800, 700
+   font-family: 'Nunito Sans', sans-serif;     Weights: 900, 800, 600, 400, 300
+*/
+
+
+/* Portrait for iPhone X, Samsung S10 :     https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+
+   #INDEX-PAGE{}
+
+      .burger {display: initial;}
+
+      a.logo-text {font-size: 5vw;}
+
+      nav {display: none;}
+
+         .site-map {display: block;}
+
+         .dropdown-content ul, .site-map ul {
+            display: block;
+            padding: 10vh 0px;
+            height: 80vh;
+         }
+
+         .dropdown-content ul li, .site-map ul li {
+            display: table;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+            width: 100%;
+         }
+
+         .dropdown-content ul li a, .site-map ul li a {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 10vw;
+         }
+
+      .title-page {}
+
+         #title-container h1 {
+            display: block;
+            font-size: var(--mobiletitleFontSize);
+         }
+
+         #title-container img {display: none;}
+
+
+      .tutorial-cards {}
+
+         /* Adjusting tutorial card width - Stacking one on top of each other */
+         .small-card-wrapper, .wide-card-wrapper {width: var(--cardMobileWidth);}
+
+         /* Adjusting tutorial card title font size */
+         .card-title h1.tutorial-card-title {font-size: 10vw; line-height: normal; width: 100%;}
+
+         /* Styling border radius */
+         .small-card-wrapper, .wide-card-wrapper {border-radius: var(--mobileBorderRadius);}
+         .card-container {border-radius: var(--mobileBorderRadius);}
+         .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight); transform: scale(1.1);}
+         .card-small img, .card-wide img {transform: scale(1.2) translateX(6%); border-radius: var(--mobileBorderRadius);}
+         /* Styling drop shadows */
+         .small-card-wrapper, .wide-card-wrapper {box-shadow: var(--mobileTutorialCardBoxShadow);}
+
+
+      footer{}
+
+         .bk2top {display: initial; position: relative; height: 50px; width: 100%;}
+
+            .bk2top-text{
+               position: absolute;
+               width: 100%;
+               text-align: center;
+               vertical-align: middle;
+               font-size: 5vw;
+               top: 50%;
+               transform: translate(-2%, -50%);
+            }
+
+            .bk2top-text span {opacity: 0.5; padding: 0px 3px;}
+
+            a.bk2top, .bk2top-arrows {display: inline-block;}
+
+            .bk2top-arrows {margin: auto;}
+
+         .drk-mode {margin-right: 10%;}
+
+            .drk-mode:hover {transform: scale(1);}
+
+
+
+   #TUTORIAL-PAGES{}
+
+      .title-page {}
+
+         h1.tutorial-title-text {
+            display: block;
+            font-size: 9.4vw; /* var(--mobile) */
+         }
+
+      .code-block {margin: -40px auto;}
+
+         /* Code Block line number padding  */
+         .enlighter-t-atomic.enlighter-linenumbers div.enlighter>div::before {padding: 1px 5px 1px 10px;}
+
+         /* Code Block line number width */
+         .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
+
+         .code-block .enlighter-default, .error-message  {
+            transform: scale(0.55);
+            width: 170vw;
+            margin: auto auto auto -46vw;
+         }
+
+}
+
+
+/* iPhone 6+, 7+ and 8+  -  Portrait */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+     #INDEX-PAGE{}
+
+       .burger {display: initial;}
+
+       a.logo-text {font-size: 5vw;}
+
+       nav {display: none;}
+
+          .site-map {display: block;}
+
+          .dropdown-content ul, .site-map ul {
+             display: block;
+             padding: 10vh 0px;
+             height: 80vh;
+          }
+
+          .dropdown-content ul li, .site-map ul li {
+             display: table;
+             text-align: center;
+             vertical-align: middle;
+             line-height: 100px;
+             width: 100%;
+          }
+
+          .dropdown-content ul li a, .site-map ul li a {
+             display: table-cell;
+             vertical-align: middle;
+             font-size: 10vw;
+          }
+
+       .title-page {}
+
+          #title-container h1 {
+             display: block;
+             font-size: var(--mobiletitleFontSize);
+          }
+
+          #title-container img {display: none;}
+
+
+       .tutorial-cards {}
+
+          /* Adjusting tutorial card width - Stacking one on top of each other */
+          .small-card-wrapper, .wide-card-wrapper {width: var(--cardMobileWidth);}
+
+          /* Adjusting tutorial card title font size */
+          .card-title h1.tutorial-card-title {font-size: 10vw; line-height: normal; width: 100%;}
+
+          /* Styling border radius */
+          .small-card-wrapper, .wide-card-wrapper {border-radius: var(--mobileBorderRadius);}
+          .card-container {border-radius: var(--mobileBorderRadius);}
+          .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight); transform: scale(1.1);}
+          .card-small img, .card-wide img {transform: scale(1.2) translateX(6%); border-radius: var(--mobileBorderRadius);}
+          /* Styling drop shadows */
+          .small-card-wrapper, .wide-card-wrapper {box-shadow: var(--mobileTutorialCardBoxShadow);}
+
+
+       footer{}
+
+          .bk2top {display: initial; position: relative; height: 50px; width: 100%;}
+
+             .bk2top-text{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 5vw;
+                top: 50%;
+                transform: translate(-2%, -50%);
+             }
+
+             .bk2top-text span {opacity: 0.5; padding: 0px 3px;}
+
+             a.bk2top, .bk2top-arrows {display: inline-block;}
+
+             .bk2top-arrows {margin: auto;}
+
+          .drk-mode {margin-right: 10%;}
+
+             .drk-mode:hover {transform: scale(1);}
+
+
+
+    #TUTORIAL-PAGES{}
+
+       .title-page {}
+
+          h1.tutorial-title-text {
+             display: block;
+             font-size: 9.4vw; /* var(--mobile) */
+          }
+
+       .code-block {margin: -40px auto;}
+
+          /* Code Block line number padding  */
+          .enlighter-t-atomic.enlighter-linenumbers div.enlighter>div::before {padding: 1px 5px 1px 10px;}
+
+          /* Code Block line number width */
+          .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
+
+          .code-block .enlighter-default, .error-message  {
+             transform: scale(0.55);
+             width: 170vw;
+             margin: auto auto auto -46vw;
+          }
+
+          #INDEX-PAGE{}
+
+             .burger {display: initial;}
+
+             a.logo-text {font-size: 5vw;}
+
+             nav {display: none;}
+
+                .site-map {display: block;}
+
+                .dropdown-content ul, .site-map ul {
+                   display: block;
+                   padding: 10vh 0px;
+                   height: 80vh;
+                }
+
+                .dropdown-content ul li, .site-map ul li {
+                   display: table;
+                   text-align: center;
+                   vertical-align: middle;
+                   line-height: 100px;
+                   width: 100%;
+                }
+
+                .dropdown-content ul li a, .site-map ul li a {
+                   display: table-cell;
+                   vertical-align: middle;
+                   font-size: 10vw;
+                }
+
+             .title-page {}
+
+                #title-container h1 {
+                   display: block;
+                   font-size: var(--mobiletitleFontSize);
+                }
+
+                #title-container img {display: none;}
+
+
+             .tutorial-cards {}
+
+                /* Adjusting tutorial card width - Stacking one on top of each other */
+                .small-card-wrapper, .wide-card-wrapper {width: var(--cardMobileWidth);}
+
+                /* Adjusting tutorial card title font size */
+                .card-title h1.tutorial-card-title {font-size: 10vw; line-height: normal; width: 100%;}
+
+                /* Styling border radius */
+                .small-card-wrapper, .wide-card-wrapper {border-radius: var(--mobileBorderRadius);}
+                .card-container {border-radius: var(--mobileBorderRadius);}
+                .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight); transform: scale(1.1);}
+                .card-small img, .card-wide img {transform: scale(1.2) translateX(6%); border-radius: var(--mobileBorderRadius);}
+                /* Styling drop shadows */
+                .small-card-wrapper, .wide-card-wrapper {box-shadow: var(--mobileTutorialCardBoxShadow);}
+
+
+             footer{}
+
+                .bk2top {display: initial; position: relative; height: 50px; width: 100%;}
+
+                   .bk2top-text{
+                      position: absolute;
+                      width: 100%;
+                      text-align: center;
+                      vertical-align: middle;
+                      font-size: 5vw;
+                      top: 50%;
+                      transform: translate(-2%, -50%);
+                   }
+
+                   .bk2top-text span {opacity: 0.5; padding: 0px 3px;}
+
+                   a.bk2top, .bk2top-arrows {display: inline-block;}
+
+                   .bk2top-arrows {margin: auto;}
+
+                .drk-mode {margin-right: 10%;}
+
+                   .drk-mode:hover {transform: scale(1);}
+
+
+
+          #TUTORIAL-PAGES{}
+
+             .title-page {}
+
+                h1.tutorial-title-text {
+                   display: block;
+                   font-size: 9.4vw; /* var(--mobile) */
+                }
+
+             .code-block {margin: -40px auto;}
+
+                /* Code Block line number padding  */
+                .enlighter-t-atomic.enlighter-linenumbers div.enlighter>div::before {padding: 1px 5px 1px 10px;}
+
+                /* Code Block line number width */
+                .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
+
+                .code-block .enlighter-default, .error-message  {
+                   transform: scale(0.55);
+                   width: 170vw;
+                   margin: auto auto auto -46vw;
+                }
+
+}
+
+
+/* iPhone 6, 7 and 8  -  Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+     #INDEX-PAGE{}
+
+       .burger {display: initial;}
+
+       a.logo-text {font-size: 5vw;}
+
+       nav {display: none;}
+
+          .site-map {display: block;}
+
+          .dropdown-content ul, .site-map ul {
+             display: block;
+             padding: 10vh 0px;
+             height: 80vh;
+          }
+
+          .dropdown-content ul li, .site-map ul li {
+             display: table;
+             text-align: center;
+             vertical-align: middle;
+             line-height: 100px;
+             width: 100%;
+          }
+
+          .dropdown-content ul li a, .site-map ul li a {
+             display: table-cell;
+             vertical-align: middle;
+             font-size: 10vw;
+          }
+
+       .title-page {}
+
+          #title-container h1 {
+             display: block;
+             font-size: var(--mobiletitleFontSize);
+          }
+
+          #title-container img {display: none;}
+
+
+       .tutorial-cards {}
+
+          /* Adjusting tutorial card width - Stacking one on top of each other */
+          .small-card-wrapper, .wide-card-wrapper {width: var(--cardMobileWidth);}
+
+          /* Adjusting tutorial card title font size */
+          .card-title h1.tutorial-card-title {font-size: 10vw; line-height: normal; width: 100%;}
+
+          /* Styling border radius */
+          .small-card-wrapper, .wide-card-wrapper {border-radius: var(--mobileBorderRadius);}
+          .card-container {border-radius: var(--mobileBorderRadius);}
+          .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight); transform: scale(1.1);}
+          .card-small img, .card-wide img {transform: scale(1.2) translateX(6%); border-radius: var(--mobileBorderRadius);}
+          /* Styling drop shadows */
+          .small-card-wrapper, .wide-card-wrapper {box-shadow: var(--mobileTutorialCardBoxShadow);}
+
+
+       footer{}
+
+          .bk2top {display: initial; position: relative; height: 50px; width: 100%;}
+
+             .bk2top-text{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 5vw;
+                top: 50%;
+                transform: translate(-2%, -50%);
+             }
+
+             .bk2top-text span {opacity: 0.5; padding: 0px 3px;}
+
+             a.bk2top, .bk2top-arrows {display: inline-block;}
+
+             .bk2top-arrows {margin: auto;}
+
+          .drk-mode {margin-right: 10%;}
+
+             .drk-mode:hover {transform: scale(1);}
+
+
+
+    #TUTORIAL-PAGES{}
+
+       .title-page {}
+
+          h1.tutorial-title-text {
+             display: block;
+             font-size: 9.4vw; /* var(--mobile) */
+          }
+
+       .code-block {margin: -40px auto;}
+
+          /* Code Block line number padding  */
+          .enlighter-t-atomic.enlighter-linenumbers div.enlighter>div::before {padding: 1px 5px 1px 10px;}
+
+          /* Code Block line number width */
+          .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
+
+          .code-block .enlighter-default, .error-message  {
+             transform: scale(0.55);
+             width: 170vw;
+             margin: auto auto auto -46vw;
+          }
+
+}
+
+
+/* iPhone 5, 5S, 5C and 5SE  -  Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+     #INDEX-PAGE{}
+
+       .burger {display: initial;}
+
+       a.logo-text {font-size: 5vw;}
+
+       nav {display: none;}
+
+          .site-map {display: block;}
+
+          .dropdown-content ul, .site-map ul {
+             display: block;
+             padding: 10vh 0px;
+             height: 80vh;
+          }
+
+          .dropdown-content ul li, .site-map ul li {
+             display: table;
+             text-align: center;
+             vertical-align: middle;
+             line-height: 100px;
+             width: 100%;
+          }
+
+          .dropdown-content ul li a, .site-map ul li a {
+             display: table-cell;
+             vertical-align: middle;
+             font-size: 10vw;
+          }
+
+       .title-page {}
+
+          #title-container h1 {
+             display: block;
+             font-size: var(--mobiletitleFontSize);
+          }
+
+          #title-container img {display: none;}
+
+
+       .tutorial-cards {}
+
+          /* Adjusting tutorial card width - Stacking one on top of each other */
+          .small-card-wrapper, .wide-card-wrapper {width: var(--cardMobileWidth);}
+
+          /* Adjusting tutorial card title font size */
+          .card-title h1.tutorial-card-title {font-size: 10vw; line-height: normal; width: 100%;}
+
+          /* Styling border radius */
+          .small-card-wrapper, .wide-card-wrapper {border-radius: var(--mobileBorderRadius);}
+          .card-container {border-radius: var(--mobileBorderRadius);}
+          .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight); transform: scale(1.1);}
+          .card-small img, .card-wide img {transform: scale(1.4) translateX(6%); border-radius: var(--mobileBorderRadius);}
+          /* Styling drop shadows */
+          .small-card-wrapper, .wide-card-wrapper {box-shadow: var(--mobileTutorialCardBoxShadow);}
+
+
+       footer{}
+
+          .bk2top {display: initial; position: relative; height: 50px; width: 100%;}
+
+             .bk2top-text{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 5vw;
+                top: 50%;
+                transform: translate(-2%, -50%);
+             }
+
+             .bk2top-text span {opacity: 0.5; padding: 0px 3px;}
+
+             a.bk2top, .bk2top-arrows {display: inline-block;}
+
+             .bk2top-arrows {margin: auto;}
+
+          .drk-mode {margin-right: 10%;}
+
+             .drk-mode:hover {transform: scale(1);}
+
+
+
+    #TUTORIAL-PAGES{}
+
+       .title-page {}
+
+          h1.tutorial-title-text {
+             display: block;
+             font-size: 9.4vw; /* var(--mobile) */
+          }
+
+       .code-block {margin: -40px auto;}
+
+          /* Code Block line number padding  */
+          .enlighter-t-atomic.enlighter-linenumbers div.enlighter>div::before {padding: 1px 5px 1px 10px;}
+
+          /* Code Block line number width */
+          .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
+
+          .code-block .enlighter-default, .error-message  {
+             transform: scale(0.55);
+             width: 170vw;
+             margin: auto auto auto -46vw;
+          }
+
+}
+
+/* iPhone 4 and 4S  -  Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+     #INDEX-PAGE{}
+
+       .burger {display: initial;}
+
+       a.logo-text {font-size: 5vw;}
+
+       nav {display: none;}
+
+          .site-map {display: block;}
+
+          .dropdown-content ul, .site-map ul {
+             display: block;
+             padding: 10vh 0px;
+             height: 80vh;
+          }
+
+          .dropdown-content ul li, .site-map ul li {
+             display: table;
+             text-align: center;
+             vertical-align: middle;
+             line-height: 100px;
+             width: 100%;
+          }
+
+          .dropdown-content ul li a, .site-map ul li a {
+             display: table-cell;
+             vertical-align: middle;
+             font-size: 10vw;
+          }
+
+       .title-page {}
+
+          #title-container h1 {
+             display: block;
+             font-size: var(--mobiletitleFontSize);
+          }
+
+          #title-container img {display: none;}
+
+
+       .tutorial-cards {}
+
+          /* Adjusting tutorial card width - Stacking one on top of each other */
+          .small-card-wrapper, .wide-card-wrapper {width: var(--cardMobileWidth);}
+
+          /* Adjusting tutorial card title font size */
+          .card-title h1.tutorial-card-title {font-size: 10vw; line-height: normal; width: 100%;}
+
+          /* Styling border radius */
+          .small-card-wrapper, .wide-card-wrapper {border-radius: var(--mobileBorderRadius);}
+          .card-container {border-radius: var(--mobileBorderRadius);}
+          .card-small, .card-wide {border-radius: var(--mobileBorderRadius); height: var(--mobileCardHeight); transform: scale(1.1);}
+          .card-small img, .card-wide img {transform: scale(1.4) translateX(6%); border-radius: var(--mobileBorderRadius);}
+          /* Styling drop shadows */
+          .small-card-wrapper, .wide-card-wrapper {box-shadow: var(--mobileTutorialCardBoxShadow);}
+
+
+       footer{}
+
+          .bk2top {display: initial; position: relative; height: 50px; width: 100%;}
+
+             .bk2top-text{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 5vw;
+                top: 50%;
+                transform: translate(-2%, -50%);
+             }
+
+             .bk2top-text span {opacity: 0.5; padding: 0px 3px;}
+
+             a.bk2top, .bk2top-arrows {display: inline-block;}
+
+             .bk2top-arrows {margin: auto;}
+
+          .drk-mode {margin-right: 10%;}
+
+             .drk-mode:hover {transform: scale(1);}
+
+
+
+    #TUTORIAL-PAGES{}
+
+       .title-page {}
+
+          h1.tutorial-title-text {
+             display: block;
+             font-size: 9.4vw; /* var(--mobile) */
+          }
+
+       .code-block {margin: -40px auto;}
+
+          /* Code Block line number padding  */
+          .enlighter-t-atomic.enlighter-linenumbers div.enlighter>div::before {padding: 1px 5px 1px 10px;}
+
+          /* Code Block line number width */
+          .enlighter-linenumbers div.enlighter>div::before {width: 10px; min-width: 10px;}
+
+          .code-block .enlighter-default, .error-message  {
+             transform: scale(0.55);
+             width: 170vw;
+             margin: auto auto auto -46vw;
+          }
+
+}

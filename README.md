@@ -101,6 +101,14 @@ Use this space to show useful examples of how a project can be used. Additional 
 * [JQuery](https://jquery.com/)
 * [EnlighterJS](https://github.com/EnlighterJS/EnlighterJS)
 * [FontAwesome](https://fontawesome.com/)
+* [CSS Tricks for Media Query Help](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+
+___
+
+## Tasks Moving Forward
+- [x] Light testing for newly added mobile support
+- [ ] Extensive testing for newly added mobile support  
+- [ ] Adjust/change the mobile "Back to Top" button
 
 ___
 
